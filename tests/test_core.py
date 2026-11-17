@@ -142,7 +142,7 @@ def test_unattributed_window_abstains(tmp_path):
 
 def test_speaker_declaration_is_required_when_turns_are_absent(tmp_path):
     path = wav(tmp_path, tone(180, 4))
-    with pytest.raises(ValueError, match="turnos.*monohablante"):
+    with pytest.raises(ValueError, match="Falta indicar quién habla"):
         analyze(path, 0, 2)
 
 

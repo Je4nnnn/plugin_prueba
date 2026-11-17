@@ -30,7 +30,7 @@ La «activación descriptiva» combina cambios acústicos de tono y nivel respec
 1. Pulsar **Cargar audio**. WAV y FLAC se leen localmente; otros formatos necesitan que FFmpeg esté disponible. Para exportar al EMBox histórico se requiere WAV PCM verificable.
 2. Indicar el canal desde 0: en un estéreo, 0 y 1 son canales distintos. El motor selecciona uno; no los promedia ni limpia o normaliza la señal.
 3. Identificar al hablante objetivo y una referencia dentro de su intervención. Por defecto se requieren **al menos cuatro segundos**, para obtener dos ventanas no solapadas de dos segundos, con la misma duración que las ventanas que se comparan. Silencio o saturación pueden invalidarla. La referencia es descriptiva y **no se presume emocionalmente neutra**.
-4. Si el archivo contiene una sola persona, marcar **Declaro un solo hablante** únicamente cuando se conozca ese dato. Con varias personas, aportar **Turnos / transcripción…** con tiempos e identidades. El programa no realiza diarización ni inventa identidades desde el texto.
+4. Si el archivo contiene una sola persona, marcar **Una sola persona en todo el audio** únicamente cuando se conozca ese dato. Con varias personas, aportar **Turnos / transcripción…** con tiempos e identidades. El programa no realiza diarización ni inventa identidades desde el texto.
 5. Pulsar **Analizar**. Ventanas sin cobertura, de otro hablante, sin atribución o solapadas no se comparan como voz válida del objetivo. Las colas menores que la ventana completa tampoco se comparan con la referencia. Una medida ausente se conserva como `null`; no se convierte en 0 Hz ni en emoción neutra.
 
 Formato mínimo de turnos CSV, con segundos sobre el audio decodificado:
@@ -44,6 +44,22 @@ T2,4,8,B,"Intervención del hablante B",,,false
 También se admite JSON con una lista o una propiedad `segments` que contenga esas filas. `start` es el inicio y `end` el final, no la duración. Los intervalos deben estar dentro del audio y los nombres de hablante deben coincidir con el objetivo elegido.
 
 La entrevista entregada el 10 de noviembre tiene transcripción automática y tiempos, pero no asignación fiable de hablantes ni audio dentro de su ZIP. Sus segmentos no deben presentarse como turnos verificados o mediciones acústicas.
+
+## Si aparece «Falta indicar quién habla»
+
+El audio se puede leer, pero todavía falta definir a quién pertenece la voz que se comparará. Con una sola persona durante toda la grabación, marque **Una sola persona en todo el audio**. Con varias voces, cargue turnos con nombres y tiempos; no utilice esa casilla para omitir la identificación en una entrevista.
+
+Los turnos pueden cubrir sólo una parte del archivo. Por ejemplo, si una entrevistada habla entre los segundos 12 y 24 y el entrevistador entre 24 y 31, el CSV puede ser:
+
+```csv
+start,end,speaker
+12,24,Entrevistada
+24,31,Entrevistador
+```
+
+Al cargarlo, el selector **Hablante** muestra esos nombres. Para analizar a la entrevistada, seleccione `Entrevistada` y una referencia de cuatro segundos dentro de su intervención, por ejemplo 12–16. Los demás tiempos sin atribución no se comparan. Los números del ejemplo deben sustituirse por los intervalos reales del audio.
+
+El botón **Cómo indicar voces** muestra esta ayuda en la aplicación. La versión 0.1.1 comprueba esta configuración antes de decodificar y restablece la declaración de una sola persona cada vez que se carga otro audio, incluida la transición desde la demostración.
 
 ## Ruta afectiva para la tesis
 

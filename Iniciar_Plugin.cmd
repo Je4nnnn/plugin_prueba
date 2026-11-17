@@ -1,5 +1,9 @@
 @echo off
 cd /d "%~dp0"
+if exist "dist\EMBoxVozAfectiva_0_1_1.exe" (
+    start "" "dist\EMBoxVozAfectiva_0_1_1.exe"
+    exit /b
+)
 if exist "dist\EMBoxVozAfectiva.exe" (
     start "" "dist\EMBoxVozAfectiva.exe"
     exit /b

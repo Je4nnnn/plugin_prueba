@@ -17,7 +17,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.figure import Figure
 
 from .affect import apply_model
-from .core import Config, analyze, load_audio, review_candidate, save_report
+from .core import (Config, SpeakerSetupError, analyze, load_audio, read_turns,
+                   review_candidate, save_report, validate_speaker_setup)
 from .embox import EmboxExportError, embox_export
 
 
@@ -28,7 +29,7 @@ def resource_root():
 class App(tk.Tk):
     def __init__(self, demo=False):
         super().__init__()
-        self.title('EMBox · Voz Afectiva | Prototipo de seminario 0.1')
+        self.title('EMBox · Voz Afectiva | Prototipo de seminario 0.1.1')
         self.geometry(f'{min(1420,self.winfo_screenwidth()-40)}x{min(900,self.winfo_screenheight()-90)}')
         self.minsize(1100, 720)
         self.configure(bg='#f2f5fa')
@@ -81,14 +82,19 @@ class App(tk.Tk):
                                    ('Hablante', self.speaker, 15), ('Canal (desde 0)', self.channel, 4),
                                    ('F0 mín.', self.floor, 5), ('F0 máx.', self.ceiling, 5)]:
             ttk.Label(controls, text=label).pack(side='left', padx=(0, 4))
-            ttk.Entry(controls, textvariable=var, width=width).pack(side='left', padx=(0, 10))
-        ttk.Checkbutton(controls, text='Declaro un solo hablante', variable=self.single).pack(side='left')
+            if var is self.speaker:
+                self.speaker_control = ttk.Combobox(controls,textvariable=var,width=width)
+                self.speaker_control.pack(side='left',padx=(0,10))
+            else:
+                ttk.Entry(controls, textvariable=var, width=width).pack(side='left', padx=(0, 10))
+        ttk.Checkbutton(controls, text='Una sola persona en todo el audio', variable=self.single).pack(side='left')
         self.run_button = ttk.Button(controls, text='2  Analizar', command=self.run_analysis)
         self.run_button.pack(side='right')
         extra = ttk.Frame(self, padding=(18, 0, 18, 6))
         extra.pack(fill='x')
         ttk.Button(extra, text='Turnos / transcripción…', command=self.choose_turns).pack(side='left')
-        ttk.Label(extra, textvariable=self.turns_path, width=40).pack(side='left', padx=6)
+        ttk.Button(extra, text='Cómo indicar voces', command=self.speaker_help).pack(side='left',padx=(5,0))
+        ttk.Label(extra, textvariable=self.turns_path, width=25).pack(side='left', padx=6)
         ttk.Button(extra, text='Modelo afectivo entrenado…', command=self.choose_model).pack(side='left')
         self.model_label = ttk.Label(extra, text='Modelo: sin cargar · no hay predicción emocional', foreground='#8a5314')
         self.model_label.pack(side='left', padx=8)
@@ -167,16 +173,65 @@ class App(tk.Tk):
         self.detail.configure(state='disabled')
 
     def choose_audio(self):
+        if self.busy:
+            return
         path = filedialog.askopenfilename(title='Audio original', filetypes=[('Audio','*.wav *.flac *.mp3 *.ogg *.m4a'),('Todos','*.*')])
         if path:
             self.audio_path.set(path)
-            self.status.set('Audio seleccionado. Indique referencia y hablante; no se presupone neutralidad.')
+            # La declaración y los turnos pertenecen a una fuente concreta, nunca a la anterior demo.
+            self.single.set(False)
+            self.turns_path.set('')
+            self.speaker.set('hablante_1')
+            self.start.set('0')
+            self.end.set('4')
+            self.channel.set('0')
+            self.speaker_control.configure(values=())
+            self.model_label.configure(text='Modelo: '+(Path(self.model_path.get()).name if self.model_path.get()
+                                                       else 'sin cargar · no hay predicción emocional'))
+            self.report, self.audio, self.sr = None, None, None
+            self.tree.delete(*self.tree.get_children())
+            self.plot()
+            self.set_detail('Audio seleccionado: '+Path(path).name+'\n\n'
+                '1. Si habla una sola persona en todo el audio, marque la casilla correspondiente.\n'
+                '2. Si hay varias voces, cargue sus turnos: inicio, fin y nombre. Pueden cubrir sólo una parte.\n'
+                '3. Indique una referencia de al menos 4 segundos dentro de la intervención elegida.\n\n'
+                'En esta versión, antes del primer análisis los tiempos de referencia se ingresan manualmente. '
+                'Las gráficas se muestran al terminar el análisis.')
+            self.status.set('Audio seleccionado. Indique una sola persona o cargue sus turnos antes de analizar.')
+
+    def speaker_help(self):
+        messagebox.showinfo('Cómo indicar quién habla',
+            'Una sola voz en toda la grabación:\n'
+            'Marque «Una sola persona en todo el audio» e indique una referencia de al menos 4 segundos con voz.\n\n'
+            'Entrevista con varias voces:\n'
+            'Cargue un CSV con las columnas start,end,speaker (tiempos en segundos). Ejemplo:\n\n'
+            'start,end,speaker\n'
+            '12,24,Entrevistada\n'
+            '24,31,Entrevistador\n\n'
+            'Seleccione la persona en «Hablante» y una referencia dentro de su intervención. '
+            'Puede anotar sólo algunos intervalos; los demás no se comparan.\n\n'
+            'El programa no separa voces automáticamente. La casilla de una sola persona '
+            'no corresponde a una entrevista con varias voces.',parent=self)
 
     def choose_turns(self):
+        if self.busy:
+            return
         path = filedialog.askopenfilename(title='CSV anotado o JSON segments', filetypes=[('Turnos / transcripción','*.csv *.json')])
         if path:
-            self.turns_path.set(path)
-            self.status.set('Turnos cargados como insumo externo. No se infiere identidad a partir del texto.')
+            try:
+                turns = read_turns(path,float('inf'))
+                names = sorted({row['speaker'] for row in turns if row['speaker']!='sin_identificar'})
+                self.turns_path.set(path)
+                self.single.set(False)
+                self.speaker_control.configure(values=names)
+                if names and self.speaker.get() not in names:
+                    self.speaker.set(names[0])
+                if names:
+                    self.status.set('Turnos cargados. Personas: '+', '.join(names)+'. Seleccione el hablante y su referencia.')
+                else:
+                    self.status.set('Transcripción cargada sin personas identificadas. Añada sus turnos para analizar varias voces.')
+            except (ValueError,KeyError,TypeError,OSError) as e:
+                messagebox.showerror('Revise el archivo de turnos',str(e),parent=self)
 
     def choose_model(self):
         path = filedialog.askopenfilename(title='Modelo Ridge entrenado con vozafecto train', filetypes=[('Modelo','*.json')])
@@ -219,6 +274,11 @@ class App(tk.Tk):
             speaker, single, turns, model = self.speaker.get(), self.single.get(), self.turns_path.get(), self.model_path.get()
             if not Path(path).is_file():
                 raise ValueError('Seleccione un archivo de audio existente.')
+            validate_speaker_setup(speaker,single,turns or None)
+        except SpeakerSetupError as e:
+            self.status.set('Falta indicar quién habla: una sola persona o turnos de la entrevista.')
+            messagebox.showinfo('Indique quién habla antes de analizar',str(e),parent=self)
+            return
         except Exception as e:
             messagebox.showerror('Revise los parámetros', str(e))
             return
@@ -259,7 +319,7 @@ class App(tk.Tk):
                     self.busy = False
                     self.run_button.configure(state='normal')
                     self.status.set('Análisis detenido: revise entrada y referencia.')
-                    messagebox.showerror('No se pudo analizar', value)
+                    messagebox.showerror('No se pudo completar el análisis', value)
         except queue.Empty:
             pass
         self.after(100, self.poll)

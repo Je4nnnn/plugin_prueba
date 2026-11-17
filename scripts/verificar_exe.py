@@ -2,6 +2,7 @@
 import ctypes
 from ctypes import wintypes
 import json
+import sys
 from pathlib import Path
 import subprocess
 import time
@@ -9,7 +10,7 @@ import time
 from PIL import ImageGrab
 
 root = Path(__file__).resolve().parents[1]
-executable = root/'dist'/'EMBoxVozAfectiva.exe'
+executable = Path(sys.argv[1]).resolve() if len(sys.argv)>1 else root/'dist'/'EMBoxVozAfectiva_0_1_1.exe'
 out = root/'validacion'
 out.mkdir(exist_ok=True)
 proc = subprocess.Popen([str(executable),'--demo'],cwd=root,

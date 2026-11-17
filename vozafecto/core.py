@@ -44,6 +44,28 @@ def write_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
 
 
+class SpeakerSetupError(ValueError):
+    """Falta la declaración de una voz o los intervalos anotados de una entrevista."""
+
+
+def validate_speaker_setup(speaker, single_speaker, turns_path=None):
+    """Validación ligera antes de decodificar un audio potencialmente largo."""
+    if not isinstance(speaker, str) or not speaker.strip() or speaker == 'sin_identificar':
+        raise ValueError('Escriba o seleccione la persona cuya voz desea analizar.')
+    if not single_speaker and not turns_path:
+        raise SpeakerSetupError(
+            'Falta indicar quién habla en el audio.\n\n'
+            'Si habla una sola persona durante toda la grabación, marque '
+            '«Una sola persona en todo el audio».\n\n'
+            'Si hay varias voces, cargue «Turnos / transcripción…» con el inicio, '
+            'fin y nombre de cada persona en los intervalos que desea analizar. '
+            'Puede anotar sólo una parte de la entrevista; no hace falta completarla.\n\n'
+            'La referencia debe quedar dentro de una intervención de la persona elegida '
+            '(al menos 4 segundos con la configuración inicial).')
+    if turns_path and not Path(turns_path).is_file():
+        raise ValueError('No se encuentra el archivo de turnos. Cárguelo nuevamente.')
+
+
 @dataclass
 class Config:
     window_sec: float = 2.0
@@ -341,15 +363,20 @@ def candidates_from_windows(windows, cfg):
 def analyze(audio_path, baseline_start, baseline_end, *, cfg=None, speaker='hablante_1',
             single_speaker=False, turns_path=None, progress: Callable | None=None):
     cfg = cfg or Config()
+    validate_speaker_setup(speaker, single_speaker, turns_path)
     y, sr, source = load_audio(audio_path, cfg.channel)
     cfg.validate(sr)
     turns = read_turns(turns_path, source['duration_sec'])
-    if not speaker.strip() or speaker == 'sin_identificar':
-        raise ValueError('Identifique el hablante objetivo de la referencia.')
     if not single_speaker:
         target = [t for t in turns if t['speaker'] == speaker and not t['overlap']]
         if not target:
-            raise ValueError('Aporte turnos con speaker o declare explícitamente una grabación monohablante.')
+            available = sorted({t['speaker'] for t in turns if t['speaker'] != 'sin_identificar'})
+            names = ', '.join(available) if available else 'ninguna persona identificada'
+            raise SpeakerSetupError(
+                f'No hay intervenciones sin solapamiento para «{speaker}».\n\n'
+                f'Personas indicadas en los turnos: {names}.\n\n'
+                'Seleccione una de ellas en «Hablante» y una referencia dentro de su intervención. '
+                'Una transcripción sin nombres de persona todavía necesita esos turnos anotados.')
         # La referencia debe quedar contenida en un turno anotado del objetivo.
         if not any(t['start'] <= baseline_start and baseline_end <= t['end'] for t in target):
             raise ValueError('La referencia debe pertenecer a un turno sin solapamiento del hablante objetivo.')

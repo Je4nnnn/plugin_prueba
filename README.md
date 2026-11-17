@@ -1,10 +1,12 @@
-# EMBox Voz Afectiva — prueba de seminario 0.1
+# EMBox Voz Afectiva — prueba de seminario 0.1.1
 
 Productor local de análisis vocal y candidatos de revisión. El ejecutable incluye una interfaz, una demostración sintética y exportación JSON. La integración con el EmBox de escritorio reutiliza su canal `Audio PlugIn`. Es una prueba de concepto previa a la tesis.
 
 ## Abrir y demostrar
 
-En Windows, abrir `Iniciar_Plugin.cmd` o `dist/EMBoxVozAfectiva.exe` y pulsar **Demostración sintética**. No se necesita instalar Python para el ejecutable. Ver [guía para el profesor](docs/GUIA_PROFESOR.md).
+En Windows, abrir `Iniciar_Plugin.cmd` o `dist/EMBoxVozAfectiva_0_1_1.exe` y pulsar **Demostración sintética**. No se necesita instalar Python para el ejecutable. Ver [guía para el profesor](docs/GUIA_PROFESOR.md).
+
+La versión 0.1.1 aclara la configuración de voces antes del análisis, muestra los nombres aportados por los turnos y reinicia la declaración de una sola persona al cambiar de audio. Para entrevistas se pueden anotar sólo los intervalos que se quieren revisar; no es necesario cubrir toda la grabación. El botón **Cómo indicar voces** muestra los pasos y un ejemplo.
 
 El recorrido es audio → referencia del hablante → mediciones → candidatos → revisión humana → JSON. **Amarillo** indica candidato automático; **naranja**, segmento marcado por el revisor; **rojo**, PIN aceptado; **gris**, descarte. La prioridad 1–3 es una regla exploratoria independiente del estado de revisión.
 
