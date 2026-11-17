@@ -1,0 +1,158 @@
+{
+  "project_sha256_unchanged": "538db4132ee11fc84dcde1e387a33251f5794bd906a1fc75c1ae08e60308aed3",
+  "route": "MainController.init_app -> seleccion de proyecto -> init_main/FXML -> SPI -> loadProjectSources -> loadProjectTags",
+  "timelines": 1,
+  "affective_validity_tested": false,
+  "observed_tags": [
+    {
+      "code": "CANDIDATO C0001",
+      "width": 158.33333333333334,
+      "layoutX": 356.25,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 4500
+    },
+    {
+      "code": "CANDIDATO C0002",
+      "width": 158.33333333333334,
+      "layoutX": 395.8333333333333,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 5000
+    },
+    {
+      "code": "CANDIDATO C0003",
+      "width": 158.33333333333334,
+      "layoutX": 435.4166666666667,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 5500
+    },
+    {
+      "code": "CANDIDATO C0004",
+      "width": 395.8333333333333,
+      "layoutX": 475,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 5000,
+      "initTimeInMS": 6000
+    },
+    {
+      "code": "CANDIDATO C0005",
+      "width": 158.33333333333334,
+      "layoutX": 752.0833333333334,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 9500
+    },
+    {
+      "code": "CANDIDATO C0006",
+      "width": 158.33333333333334,
+      "layoutX": 791.6666666666666,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 10000
+    },
+    {
+      "code": "CANDIDATO C0007",
+      "width": 316.6666666666667,
+      "layoutX": 831.25,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 4000,
+      "initTimeInMS": 10500
+    },
+    {
+      "code": "CANDIDATO C0008",
+      "width": 158.33333333333334,
+      "layoutX": 1029.1666666666667,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 13000
+    },
+    {
+      "code": "CANDIDATO C0009",
+      "width": 158.33333333333334,
+      "layoutX": 1068.75,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 13500
+    },
+    {
+      "code": "CANDIDATO C0010",
+      "width": 316.6666666666667,
+      "layoutX": 1108.3333333333333,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 4000,
+      "initTimeInMS": 14000
+    },
+    {
+      "code": "CANDIDATO C0011",
+      "width": 158.33333333333334,
+      "layoutX": 1306.25,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 16500
+    },
+    {
+      "code": "CANDIDATO C0012",
+      "width": 158.33333333333334,
+      "layoutX": 1345.8333333333333,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 17000
+    },
+    {
+      "code": "CANDIDATO C0013",
+      "width": 158.33333333333334,
+      "layoutX": 1385.4166666666667,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 17500
+    },
+    {
+      "code": "CANDIDATO C0014",
+      "width": 158.33333333333334,
+      "layoutX": 1464.5833333333333,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 18500
+    },
+    {
+      "code": "CANDIDATO C0015",
+      "width": 158.33333333333334,
+      "layoutX": 1504.1666666666667,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 19000
+    },
+    {
+      "code": "CANDIDATO C0016",
+      "width": 158.33333333333334,
+      "layoutX": 1702.0833333333333,
+      "canal": "Audio PlugIn",
+      "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+      "lengthInMS": 2000,
+      "initTimeInMS": 21500
+    }
+  ],
+  "project": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\project.json",
+  "audio_providers": 1,
+  "audio_playback_tested": false,
+  "source_duration_sec": 24,
+  "snapshot": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\snapshot.png",
+  "status": "PASS"
+}

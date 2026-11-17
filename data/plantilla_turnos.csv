@@ -1,0 +1,3 @@
+start,end,speaker,text,content_note,interaction_note,overlap
+0,4,A,"Texto de ejemplo: sustituir por transcripción real","Observación manual del contenido","Observación manual de la interacción",false
+4,8,B,"Otra intervención de ejemplo","","",false

@@ -1,0 +1,142 @@
+{
+    "name":  "Voz Afectiva — prueba de seminario",
+    "channels":  [
+                     "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\EMBOX_LOCAL\\app\\plugins\\audioplugin-1.0-SNAPSHOT.jar"
+                 ],
+    "sources":  [
+                    {
+                        "canal":  "Audio PlugIn",
+                        "pathToSource":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav"
+                    }
+                ],
+    "tags":  [
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0001",
+                     "desc":  "Variación vocal: espectro, prosodia | Evento C0001. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  4500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0002",
+                     "desc":  "Variación vocal: espectro, prosodia | Evento C0002. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  5000,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0003",
+                     "desc":  "Variación vocal: energía, espectro, prosodia | Evento C0003. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  5500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0004",
+                     "desc":  "Variación vocal: calidad, energía, espectro, prosodia | Evento C0004. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  6000,
+                     "lengthInMS":  5000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0005",
+                     "desc":  "Variación vocal: energía, espectro, prosodia | Evento C0005. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  9500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0006",
+                     "desc":  "Variación vocal: espectro, prosodia | Evento C0006. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  10000,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0007",
+                     "desc":  "Variación vocal: espectro, prosodia | Evento C0007. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  10500,
+                     "lengthInMS":  4000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0008",
+                     "desc":  "Variación vocal: calidad, espectro, prosodia | Evento C0008. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  13000,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0009",
+                     "desc":  "Variación vocal: calidad, espectro, prosodia | Evento C0009. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  13500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0010",
+                     "desc":  "Variación vocal: calidad, espectro, prosodia | Evento C0010. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  14000,
+                     "lengthInMS":  4000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0011",
+                     "desc":  "Variación vocal: calidad, espectro, prosodia | Evento C0011. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  16500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0012",
+                     "desc":  "Variación vocal: calidad, espectro, prosodia | Evento C0012. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  17000,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0013",
+                     "desc":  "Variación vocal: espectro, prosodia | Evento C0013. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  17500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0014",
+                     "desc":  "Variación vocal: espectro | Evento C0014. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  18500,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0015",
+                     "desc":  "Variación vocal: espectro, temporalidad | Evento C0015. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  19000,
+                     "lengthInMS":  2000
+                 },
+                 {
+                     "canal":  "Audio PlugIn",
+                     "source":  "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\validacion\\embox_gui\\copia_proyecto\\audio_8cbba4b10240b8b9.wav",
+                     "code":  "CANDIDATO C0016",
+                     "desc":  "Variación vocal: espectro | Evento C0016. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+                     "initTimeInMS":  21500,
+                     "lengthInMS":  2000
+                 }
+             ]
+}

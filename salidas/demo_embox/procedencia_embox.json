@@ -1,0 +1,818 @@
+{
+  "schema_version": "1.0",
+  "adapter": "vozafecto.embox/1",
+  "generated_at": "2026-11-17T08:48:51.899324+00:00",
+  "source": {
+    "path": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\data\\demo_sintetica.wav",
+    "sha256": "8cbba4b10240b8b9470e6232caa4e58dfa110b3f18db84a66fd6685890c26b99",
+    "duration_sec": 24.0
+  },
+  "source_in_project": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+  "original_project": null,
+  "original_project_sha256": null,
+  "report_sha256": "53585363e576efc0a37c8b00bc47013debd8642d9c9b74cb8523b854f27a35de",
+  "include_pending": true,
+  "exported_count": 16,
+  "added_count": 16,
+  "mapping": [
+    {
+      "candidate_id": "C0001",
+      "start_sec": 4.5,
+      "end_sec": 6.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493894,
+          "reference": 3e-06,
+          "robust_deviation": 8.493891,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -16.698808,
+          "reference": -11.572384,
+          "robust_deviation": -2.563212,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 49.73249,
+          "reference": 80.211137,
+          "robust_deviation": -10.159549,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0001",
+        "desc": "Variación vocal: espectro, prosodia | Evento C0001. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 4500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0002",
+      "start_sec": 5.0,
+      "end_sec": 7.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 196.603852,
+          "reference": 149.99967,
+          "robust_deviation": 5.825523,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493896,
+          "reference": 3e-06,
+          "robust_deviation": 8.493893,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.357212,
+          "reference": -11.572384,
+          "robust_deviation": -2.892414,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 51.845232,
+          "reference": 80.211137,
+          "robust_deviation": -9.455302,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0002",
+        "desc": "Variación vocal: espectro, prosodia | Evento C0002. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 5000,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0003",
+      "start_sec": 5.5,
+      "end_sec": 7.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000274,
+          "reference": 149.99967,
+          "robust_deviation": 11.875075,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493898,
+          "reference": 3e-06,
+          "robust_deviation": 8.493895,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -14.047107,
+          "reference": -21.702656,
+          "robust_deviation": 2.55185,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.767672,
+          "reference": -11.572384,
+          "robust_deviation": -3.097644,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 53.257066,
+          "reference": 80.211137,
+          "robust_deviation": -8.98469,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0003",
+        "desc": "Variación vocal: energía, espectro, prosodia | Evento C0003. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 5500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0004",
+      "start_sec": 6.0,
+      "end_sec": 11.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000301,
+          "reference": 149.99967,
+          "robust_deviation": 11.875079,
+          "unit": "Hz"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -12.988113,
+          "reference": -21.702656,
+          "robust_deviation": 2.904848,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 85.239012,
+          "reference": 77.541103,
+          "robust_deviation": 2.56597,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -25.611091,
+          "reference": -11.572384,
+          "robust_deviation": -7.019353,
+          "unit": "dB/octava"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0004",
+        "desc": "Variación vocal: calidad, energía, espectro, prosodia | Evento C0004. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 6000,
+        "lengthInMS": 5000
+      }
+    },
+    {
+      "candidate_id": "C0005",
+      "start_sec": 9.5,
+      "end_sec": 11.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000274,
+          "reference": 149.99967,
+          "robust_deviation": 11.875075,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493898,
+          "reference": 3e-06,
+          "robust_deviation": 8.493895,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -14.047105,
+          "reference": -21.702656,
+          "robust_deviation": 2.55185,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.771184,
+          "reference": -11.572384,
+          "robust_deviation": -3.0994,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 53.266339,
+          "reference": 80.211137,
+          "robust_deviation": -8.981599,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0005",
+        "desc": "Variación vocal: energía, espectro, prosodia | Evento C0005. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 9500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0006",
+      "start_sec": 10.0,
+      "end_sec": 12.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 244.384113,
+          "reference": 149.99967,
+          "robust_deviation": 11.798055,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493896,
+          "reference": 3e-06,
+          "robust_deviation": 8.493893,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.360649,
+          "reference": -11.572384,
+          "robust_deviation": -2.894132,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 51.858705,
+          "reference": 80.211137,
+          "robust_deviation": -9.450811,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0006",
+        "desc": "Variación vocal: espectro, prosodia | Evento C0006. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 10000,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0007",
+      "start_sec": 10.5,
+      "end_sec": 14.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493894,
+          "reference": 3e-06,
+          "robust_deviation": 8.493891,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.830746,
+          "reference": -11.572384,
+          "robust_deviation": -3.129181,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 49.75572,
+          "reference": 80.211137,
+          "robust_deviation": -10.151806,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0007",
+        "desc": "Variación vocal: espectro, prosodia | Evento C0007. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 10500,
+        "lengthInMS": 4000
+      }
+    },
+    {
+      "candidate_id": "C0008",
+      "start_sec": 13.0,
+      "end_sec": 15.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 5.626602,
+          "reference": 3e-06,
+          "robust_deviation": 5.626599,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 43.022321,
+          "reference": 77.541103,
+          "robust_deviation": -11.506261,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.330882,
+          "reference": -11.572384,
+          "robust_deviation": -3.379249,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 70.003581,
+          "reference": 80.211137,
+          "robust_deviation": -3.402519,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0008",
+        "desc": "Variación vocal: calidad, espectro, prosodia | Evento C0008. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 13000,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0009",
+      "start_sec": 13.5,
+      "end_sec": 15.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 6.077429,
+          "reference": 3e-06,
+          "robust_deviation": 6.077426,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 23.892708,
+          "reference": 77.541103,
+          "robust_deviation": -17.882798,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.394713,
+          "reference": 0.000203,
+          "robust_deviation": 2.78902,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.626682,
+          "reference": -11.572384,
+          "robust_deviation": -3.527149,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 70.001034,
+          "reference": 80.211137,
+          "robust_deviation": -3.403368,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0009",
+        "desc": "Variación vocal: calidad, espectro, prosodia | Evento C0009. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 13500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0010",
+      "start_sec": 14.0,
+      "end_sec": 18.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 179.590339,
+          "reference": 149.99967,
+          "robust_deviation": 3.698834,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 6.449669,
+          "reference": 3e-06,
+          "robust_deviation": 6.449666,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 21.675956,
+          "reference": 77.541103,
+          "robust_deviation": -18.621716,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.77422,
+          "reference": 0.000203,
+          "robust_deviation": 3.548034,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.430077,
+          "reference": -11.572384,
+          "robust_deviation": -2.928847,
+          "unit": "dB/octava"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0010",
+        "desc": "Variación vocal: calidad, espectro, prosodia | Evento C0010. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 14000,
+        "lengthInMS": 4000
+      }
+    },
+    {
+      "candidate_id": "C0011",
+      "start_sec": 16.5,
+      "end_sec": 18.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 6.077429,
+          "reference": 3e-06,
+          "robust_deviation": 6.077426,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 23.892708,
+          "reference": 77.541103,
+          "robust_deviation": -17.882798,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.389246,
+          "reference": 0.000203,
+          "robust_deviation": 2.778086,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.561584,
+          "reference": -11.572384,
+          "robust_deviation": -3.4946,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.958643,
+          "reference": 80.211137,
+          "robust_deviation": -3.417498,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0011",
+        "desc": "Variación vocal: calidad, espectro, prosodia | Evento C0011. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 16500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0012",
+      "start_sec": 17.0,
+      "end_sec": 19.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 5.626602,
+          "reference": 3e-06,
+          "robust_deviation": 5.626599,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 43.022321,
+          "reference": 77.541103,
+          "robust_deviation": -11.506261,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.262056,
+          "reference": -11.572384,
+          "robust_deviation": -3.344836,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.961165,
+          "reference": 80.211137,
+          "robust_deviation": -3.416657,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0012",
+        "desc": "Variación vocal: calidad, espectro, prosodia | Evento C0012. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 17000,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0013",
+      "start_sec": 17.5,
+      "end_sec": 19.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 4.093569,
+          "reference": 3e-06,
+          "robust_deviation": 4.093566,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.75867,
+          "reference": -11.572384,
+          "robust_deviation": -3.093143,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.963689,
+          "reference": 80.211137,
+          "robust_deviation": -3.415816,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0013",
+        "desc": "Variación vocal: espectro, prosodia | Evento C0013. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 17500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0014",
+      "start_sec": 18.5,
+      "end_sec": 20.5,
+      "level": "amarillo",
+      "priority": 1,
+      "summary": "Variación vocal: espectro",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 56.423928,
+          "reference": 80.211137,
+          "robust_deviation": -7.92907,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0014",
+        "desc": "Variación vocal: espectro | Evento C0014. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 18500,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0015",
+      "start_sec": 19.0,
+      "end_sec": 21.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, temporalidad",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 54.657331,
+          "reference": 80.211137,
+          "robust_deviation": -8.517935,
+          "unit": "dB"
+        },
+        {
+          "feature": "low_energy_ratio",
+          "observed": 0.494949,
+          "reference": 0.0,
+          "robust_deviation": 4.94949,
+          "unit": "proporción"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0015",
+        "desc": "Variación vocal: espectro, temporalidad | Evento C0015. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 19000,
+        "lengthInMS": 2000
+      }
+    },
+    {
+      "candidate_id": "C0016",
+      "start_sec": 21.5,
+      "end_sec": 23.5,
+      "level": "amarillo",
+      "priority": 1,
+      "summary": "Variación vocal: espectro",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 56.414483,
+          "reference": 80.211137,
+          "robust_deviation": -7.932218,
+          "unit": "dB"
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      },
+      "native_tag": {
+        "canal": "Audio PlugIn",
+        "source": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\salidas\\demo_embox\\audio_8cbba4b10240b8b9.wav",
+        "code": "CANDIDATO C0016",
+        "desc": "Variación vocal: espectro | Evento C0016. Estado: pending. Propuesta de revisión vocal; no constituye diagnóstico ni prueba de emoción. Método y evidencia en el reporte y procedencia_embox.json.",
+        "initTimeInMS": 21500,
+        "lengthInMS": 2000
+      }
+    }
+  ],
+  "compatibility": {
+    "channel": "Audio PlugIn",
+    "time_unit": "milliseconds",
+    "rounding": "nearest millisecond",
+    "entrypoint": "Abrir la carpeta como proyecto EMBox; project.json.",
+    "native_affective_panel": false,
+    "tags_json_direct_import": false,
+    "detail": "El canal histórico muestra intervalos. Sus colores y Ver detalle no interpretan el análisis afectivo."
+  }
+}

@@ -1,0 +1,4 @@
+SEÑAL SINTÉTICA, NO VOZ HUMANA.
+24 s, 16 kHz mono. Referencia 0–4 s: 150 Hz. 6–11 s: 245 Hz y mayor amplitud.
+14–18 s: F0 modulado. 20–22 s: ceros digitales. Las transiciones no son emociones.
+Objetivo: verificar medición, abstención, revisión y exportación.

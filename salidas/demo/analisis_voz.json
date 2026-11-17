@@ -1,0 +1,3973 @@
+{
+  "schema_version": "vozafecto-0.1",
+  "software": {
+    "name": "EMBox Voz Afectiva",
+    "version": "0.1.0",
+    "python": "3.12.10",
+    "numpy": "2.2.6",
+    "parselmouth": "0.4.7",
+    "praat": "6.1.38"
+  },
+  "created_at": "2026-11-17T08:48:50.741423+00:00",
+  "source": {
+    "path": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\plugin_prueba\\data\\demo_sintetica.wav",
+    "sha256": "8cbba4b10240b8b9470e6232caa4e58dfa110b3f18db84a66fd6685890c26b99",
+    "duration_sec": 24.0,
+    "sample_rate": 16000,
+    "channels": 1,
+    "selected_channel": 0,
+    "decoder": "libsndfile",
+    "normalization": "ninguna",
+    "sample_count": 384000
+  },
+  "config": {
+    "window_sec": 2.0,
+    "step_sec": 0.5,
+    "frame_sec": 0.01,
+    "pitch_floor": 60.0,
+    "pitch_ceiling": 500.0,
+    "silence_dbfs": -45.0,
+    "minimum_voiced": 0.5,
+    "clipping_limit": 0.01,
+    "robust_threshold": 2.5,
+    "channel": 0
+  },
+  "speaker_mode": "single_speaker_user_declared",
+  "turns_source": null,
+  "baseline": {
+    "start": 0.0,
+    "end": 4.0,
+    "valid_subwindows": 2,
+    "subwindow_sec": 2.0,
+    "statistics": {
+      "f0_median_hz": {
+        "median": 149.99967,
+        "mad": 0.0,
+        "scale": 8.0,
+        "scale_floor": 8.0,
+        "n_valid": 2
+      },
+      "f0_range_st": {
+        "median": 3e-06,
+        "mad": 0.0,
+        "scale": 1.0,
+        "scale_floor": 1.0,
+        "n_valid": 2
+      },
+      "rms_dbfs": {
+        "median": -21.702656,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 2
+      },
+      "hnr_db": {
+        "median": 77.541103,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 2
+      },
+      "jitter_local_pct": {
+        "median": 0.000203,
+        "mad": 0.0,
+        "scale": 0.5,
+        "scale_floor": 0.5,
+        "n_valid": 2
+      },
+      "shimmer_local_pct": {
+        "median": 0.001262,
+        "mad": 0.0,
+        "scale": 2.0,
+        "scale_floor": 2.0,
+        "n_valid": 2
+      },
+      "centroid_hz": {
+        "median": 209.958741,
+        "mad": 0.0,
+        "scale": 200.0,
+        "scale_floor": 200.0,
+        "n_valid": 2
+      },
+      "spectral_tilt_db_oct": {
+        "median": -11.572384,
+        "mad": 0.0,
+        "scale": 2.0,
+        "scale_floor": 2.0,
+        "n_valid": 2
+      },
+      "low_high_db": {
+        "median": 80.211137,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 2
+      },
+      "low_energy_ratio": {
+        "median": 0.0,
+        "mad": 0.0,
+        "scale": 0.1,
+        "scale_floor": 0.1,
+        "n_valid": 2
+      }
+    },
+    "meaning": "Referencia descriptiva seleccionada; neutralidad no presumida.",
+    "speaker": "sintetico_A"
+  },
+  "feature_dictionary": {
+    "f0_median_hz": {
+      "unit": "Hz",
+      "definition": "Mediana F0 en cuadros periódicos"
+    },
+    "f0_range_st": {
+      "unit": "semitonos",
+      "definition": "12 log2(p90/p10) de F0"
+    },
+    "f0_slope_st_sec": {
+      "unit": "semitonos/s",
+      "definition": "Regresión del contorno F0 sonoro, sin interpolar huecos"
+    },
+    "rms_dbfs": {
+      "unit": "dBFS",
+      "definition": "20 log10(RMS); referencia amplitud digital 1, sin calibración SPL"
+    },
+    "jitter_local_pct": {
+      "unit": "%",
+      "definition": "Perturbación local de períodos, Praat"
+    },
+    "shimmer_local_pct": {
+      "unit": "%",
+      "definition": "Perturbación local de amplitudes, Praat"
+    },
+    "hnr_db": {
+      "unit": "dB",
+      "definition": "Mediana de armonicidad CC en cuadros periódicos"
+    },
+    "centroid_hz": {
+      "unit": "Hz",
+      "definition": "Centroide de magnitud STFT, cuadros con energía"
+    },
+    "spectral_tilt_db_oct": {
+      "unit": "dB/octava",
+      "definition": "Ajuste log2(f) de espectro de potencia entre 500–4000 Hz"
+    },
+    "low_high_db": {
+      "unit": "dB",
+      "definition": "10 log10 potencia 50–1000 / 1000–5000 Hz"
+    },
+    "low_energy_ratio": {
+      "unit": "proporción",
+      "definition": "Cuadros RMS bajo umbral fijo; no equivale a ausencia de habla"
+    },
+    "voiced_ratio": {
+      "unit": "proporción",
+      "definition": "Cuadros con periodicidad estimada; no equivale a VAD"
+    }
+  },
+  "windows": [
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000001",
+      "start": 0.0,
+      "end": 2.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000002",
+      "start": 0.5,
+      "end": 2.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000003",
+      "start": 1.0,
+      "end": 3.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000004",
+      "start": 1.5,
+      "end": 3.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000005",
+      "start": 2.0,
+      "end": 4.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000006",
+      "start": 2.5,
+      "end": 4.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000007",
+      "start": 3.0,
+      "end": 5.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000008",
+      "start": 3.5,
+      "end": 5.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000009",
+      "start": 4.0,
+      "end": 6.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 8.493894,
+        "f0_slope_st_sec": 4.801821,
+        "rms_dbfs": -17.537098,
+        "jitter_local_pct": 0.019235,
+        "shimmer_local_pct": 0.006597,
+        "hnr_db": 84.993921,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -16.698808,
+        "low_high_db": 49.73249,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000010",
+      "start": 4.5,
+      "end": 6.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 8.493891,
+          "rms_dbfs": 1.388519,
+          "hnr_db": 2.484273,
+          "jitter_local_pct": 0.038064,
+          "shimmer_local_pct": 0.002668,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -2.563212,
+          "low_high_db": -10.159549,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.69426,
+        "instability_index": 1.510183,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493894,
+            "reference": 3e-06,
+            "robust_deviation": 8.493891,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -16.698808,
+            "reference": -11.572384,
+            "robust_deviation": -2.563212,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 49.73249,
+            "reference": 80.211137,
+            "robust_deviation": -10.159549,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 196.603852,
+        "f0_range_st": 8.493896,
+        "f0_slope_st_sec": 6.467411,
+        "rms_dbfs": -15.450577,
+        "jitter_local_pct": 0.003012,
+        "shimmer_local_pct": 0.001898,
+        "hnr_db": 84.74883,
+        "centroid_hz": 340.980533,
+        "spectral_tilt_db_oct": -17.357212,
+        "low_high_db": 51.845232,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000011",
+      "start": 5.0,
+      "end": 7.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 5.825523,
+          "f0_range_st": 8.493893,
+          "rms_dbfs": 2.084026,
+          "hnr_db": 2.402576,
+          "jitter_local_pct": 0.005618,
+          "shimmer_local_pct": 0.000318,
+          "centroid_hz": 0.655109,
+          "spectral_tilt_db_oct": -2.892414,
+          "low_high_db": -9.455302,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 3.954775,
+        "instability_index": 1.501484,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 196.603852,
+            "reference": 149.99967,
+            "robust_deviation": 5.825523,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493896,
+            "reference": 3e-06,
+            "robust_deviation": 8.493893,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.357212,
+            "reference": -11.572384,
+            "robust_deviation": -2.892414,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 51.845232,
+            "reference": 80.211137,
+            "robust_deviation": -9.455302,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000274,
+        "f0_range_st": 8.493898,
+        "f0_slope_st_sec": 4.803835,
+        "rms_dbfs": -14.047107,
+        "jitter_local_pct": 0.131699,
+        "shimmer_local_pct": 0.020408,
+        "hnr_db": 84.993921,
+        "centroid_hz": 341.136154,
+        "spectral_tilt_db_oct": -17.767672,
+        "low_high_db": 53.257066,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000012",
+      "start": 5.5,
+      "end": 7.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875075,
+          "f0_range_st": 8.493895,
+          "rms_dbfs": 2.55185,
+          "hnr_db": 2.484273,
+          "jitter_local_pct": 0.262992,
+          "shimmer_local_pct": 0.009573,
+          "centroid_hz": 0.655887,
+          "spectral_tilt_db_oct": -3.097644,
+          "low_high_db": -8.98469,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.275925,
+        "instability_index": 1.568141,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000274,
+            "reference": 149.99967,
+            "robust_deviation": 11.875075,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493898,
+            "reference": 3e-06,
+            "robust_deviation": 8.493895,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -14.047107,
+            "reference": -21.702656,
+            "robust_deviation": 2.55185,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.767672,
+            "reference": -11.572384,
+            "robust_deviation": -3.097644,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 53.257066,
+            "reference": 80.211137,
+            "robust_deviation": -8.98469,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000301,
+        "f0_range_st": 7e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.611091,
+        "low_high_db": 76.709887,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000013",
+      "start": 6.0,
+      "end": 8.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875079,
+          "f0_range_st": 4e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.019353,
+          "low_high_db": -1.167083,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000301,
+            "reference": 149.99967,
+            "robust_deviation": 11.875079,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.611091,
+            "reference": -11.572384,
+            "robust_deviation": -7.019353,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000297,
+        "f0_range_st": 8e-06,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.608855,
+        "low_high_db": 76.716901,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000014",
+      "start": 6.5,
+      "end": 8.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875078,
+          "f0_range_st": 5e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.018235,
+          "low_high_db": -1.164745,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000297,
+            "reference": 149.99967,
+            "robust_deviation": 11.875078,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.608855,
+            "reference": -11.572384,
+            "robust_deviation": -7.018235,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000301,
+        "f0_range_st": 7e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.611091,
+        "low_high_db": 76.709887,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000015",
+      "start": 7.0,
+      "end": 9.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875079,
+          "f0_range_st": 4e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.019353,
+          "low_high_db": -1.167083,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000301,
+            "reference": 149.99967,
+            "robust_deviation": 11.875079,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.611091,
+            "reference": -11.572384,
+            "robust_deviation": -7.019353,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000297,
+        "f0_range_st": 8e-06,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.608855,
+        "low_high_db": 76.716901,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000016",
+      "start": 7.5,
+      "end": 9.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875078,
+          "f0_range_st": 5e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.018235,
+          "low_high_db": -1.164745,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000297,
+            "reference": 149.99967,
+            "robust_deviation": 11.875078,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.608855,
+            "reference": -11.572384,
+            "robust_deviation": -7.018235,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000301,
+        "f0_range_st": 7e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.611091,
+        "low_high_db": 76.709887,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000017",
+      "start": 8.0,
+      "end": 10.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875079,
+          "f0_range_st": 4e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.019353,
+          "low_high_db": -1.167083,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000301,
+            "reference": 149.99967,
+            "robust_deviation": 11.875079,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.611091,
+            "reference": -11.572384,
+            "robust_deviation": -7.019353,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000297,
+        "f0_range_st": 8e-06,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.608855,
+        "low_high_db": 76.716901,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000018",
+      "start": 8.5,
+      "end": 10.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875078,
+          "f0_range_st": 5e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.018235,
+          "low_high_db": -1.164745,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000297,
+            "reference": 149.99967,
+            "robust_deviation": 11.875078,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.608855,
+            "reference": -11.572384,
+            "robust_deviation": -7.018235,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000301,
+        "f0_range_st": 7e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.988113,
+        "jitter_local_pct": 0.000243,
+        "shimmer_local_pct": 0.000952,
+        "hnr_db": 85.239012,
+        "centroid_hz": 341.208251,
+        "spectral_tilt_db_oct": -25.611091,
+        "low_high_db": 76.709887,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000019",
+      "start": 9.0,
+      "end": 11.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875079,
+          "f0_range_st": 4e-06,
+          "rms_dbfs": 2.904848,
+          "hnr_db": 2.56597,
+          "jitter_local_pct": 8e-05,
+          "shimmer_local_pct": -0.000155,
+          "centroid_hz": 0.656248,
+          "spectral_tilt_db_oct": -7.019353,
+          "low_high_db": -1.167083,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.452424,
+        "instability_index": 2.1e-05,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000301,
+            "reference": 149.99967,
+            "robust_deviation": 11.875079,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -12.988113,
+            "reference": -21.702656,
+            "robust_deviation": 2.904848,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 85.239012,
+            "reference": 77.541103,
+            "robust_deviation": 2.56597,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -25.611091,
+            "reference": -11.572384,
+            "robust_deviation": -7.019353,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 245.000274,
+        "f0_range_st": 8.493898,
+        "f0_slope_st_sec": -4.736014,
+        "rms_dbfs": -14.047105,
+        "jitter_local_pct": 0.002644,
+        "shimmer_local_pct": 0.001324,
+        "hnr_db": 84.74883,
+        "centroid_hz": 341.14249,
+        "spectral_tilt_db_oct": -17.771184,
+        "low_high_db": 53.266339,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000020",
+      "start": 9.5,
+      "end": 11.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.875075,
+          "f0_range_st": 8.493895,
+          "rms_dbfs": 2.55185,
+          "hnr_db": 2.402576,
+          "jitter_local_pct": 0.004882,
+          "shimmer_local_pct": 3.1e-05,
+          "centroid_hz": 0.655919,
+          "spectral_tilt_db_oct": -3.0994,
+          "low_high_db": -8.981599,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.275925,
+        "instability_index": 1.501228,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 245.000274,
+            "reference": 149.99967,
+            "robust_deviation": 11.875075,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493898,
+            "reference": 3e-06,
+            "robust_deviation": 8.493895,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -14.047105,
+            "reference": -21.702656,
+            "robust_deviation": 2.55185,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.771184,
+            "reference": -11.572384,
+            "robust_deviation": -3.0994,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 53.266339,
+            "reference": 80.211137,
+            "robust_deviation": -8.981599,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 244.384113,
+        "f0_range_st": 8.493896,
+        "f0_slope_st_sec": -6.466767,
+        "rms_dbfs": -15.450577,
+        "jitter_local_pct": 0.002922,
+        "shimmer_local_pct": 0.001439,
+        "hnr_db": 84.74883,
+        "centroid_hz": 340.980533,
+        "spectral_tilt_db_oct": -17.360649,
+        "low_high_db": 51.858705,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000021",
+      "start": 10.0,
+      "end": 12.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 11.798055,
+          "f0_range_st": 8.493893,
+          "rms_dbfs": 2.084026,
+          "hnr_db": 2.402576,
+          "jitter_local_pct": 0.005438,
+          "shimmer_local_pct": 8.8e-05,
+          "centroid_hz": 0.655109,
+          "spectral_tilt_db_oct": -2.894132,
+          "low_high_db": -9.450811,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.042013,
+        "instability_index": 1.501381,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 244.384113,
+            "reference": 149.99967,
+            "robust_deviation": 11.798055,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493896,
+            "reference": 3e-06,
+            "robust_deviation": 8.493893,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.360649,
+            "reference": -11.572384,
+            "robust_deviation": -2.894132,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 51.858705,
+            "reference": 80.211137,
+            "robust_deviation": -9.450811,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 8.493894,
+        "f0_slope_st_sec": -4.868325,
+        "rms_dbfs": -17.537095,
+        "jitter_local_pct": 0.027167,
+        "shimmer_local_pct": 0.002618,
+        "hnr_db": 84.378759,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -16.70279,
+        "low_high_db": 49.75572,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000022",
+      "start": 10.5,
+      "end": 12.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 8.493891,
+          "rms_dbfs": 1.38852,
+          "hnr_db": 2.279219,
+          "jitter_local_pct": 0.053928,
+          "shimmer_local_pct": 0.000678,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -2.565203,
+          "low_high_db": -10.151806,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.69426,
+        "instability_index": 1.513651,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 8.493894,
+            "reference": 3e-06,
+            "robust_deviation": 8.493891,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -16.70279,
+            "reference": -11.572384,
+            "robust_deviation": -2.565203,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 49.75572,
+            "reference": 80.211137,
+            "robust_deviation": -10.151806,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000023",
+      "start": 11.0,
+      "end": 13.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000024",
+      "start": 11.5,
+      "end": 13.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000025",
+      "start": 12.0,
+      "end": 14.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 4.093569,
+        "f0_slope_st_sec": 1.592208,
+        "rms_dbfs": -21.702662,
+        "jitter_local_pct": 0.482507,
+        "shimmer_local_pct": 0.036536,
+        "hnr_db": 77.541103,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -17.830746,
+        "low_high_db": 70.00613,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000026",
+      "start": 12.5,
+      "end": 14.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 4.093566,
+          "rms_dbfs": -2e-06,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.964608,
+          "shimmer_local_pct": 0.017637,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -3.129181,
+          "low_high_db": -3.401669,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -1e-06,
+        "instability_index": 1.268953,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 4.093569,
+            "reference": 3e-06,
+            "robust_deviation": 4.093566,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.830746,
+            "reference": -11.572384,
+            "robust_deviation": -3.129181,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 70.00613,
+            "reference": 80.211137,
+            "robust_deviation": -3.401669,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 5.626602,
+        "f0_slope_st_sec": 2.083271,
+        "rms_dbfs": -21.702668,
+        "jitter_local_pct": 0.93862,
+        "shimmer_local_pct": 0.053886,
+        "hnr_db": 43.022321,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -18.330882,
+        "low_high_db": 70.003581,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000027",
+      "start": 13.0,
+      "end": 15.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 5.626599,
+          "rms_dbfs": -4e-06,
+          "hnr_db": -11.506261,
+          "jitter_local_pct": 1.876834,
+          "shimmer_local_pct": 0.026312,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -3.379249,
+          "low_high_db": -3.402519,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2e-06,
+        "instability_index": 3.382436,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 5.626602,
+            "reference": 3e-06,
+            "robust_deviation": 5.626599,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 43.022321,
+            "reference": 77.541103,
+            "robust_deviation": -11.506261,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -18.330882,
+            "reference": -11.572384,
+            "robust_deviation": -3.379249,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 70.003581,
+            "reference": 80.211137,
+            "robust_deviation": -3.402519,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 164.063885,
+        "f0_range_st": 6.077429,
+        "f0_slope_st_sec": 1.403629,
+        "rms_dbfs": -21.702674,
+        "jitter_local_pct": 1.394713,
+        "shimmer_local_pct": 0.095002,
+        "hnr_db": 23.892708,
+        "centroid_hz": 231.524656,
+        "spectral_tilt_db_oct": -18.626682,
+        "low_high_db": 70.001034,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000028",
+      "start": 13.5,
+      "end": 15.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 1.758027,
+          "f0_range_st": 6.077426,
+          "rms_dbfs": -6e-06,
+          "hnr_db": -17.882798,
+          "jitter_local_pct": 2.78902,
+          "shimmer_local_pct": 0.04687,
+          "centroid_hz": 0.10783,
+          "spectral_tilt_db_oct": -3.527149,
+          "low_high_db": -3.403368,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.879011,
+        "instability_index": 3.708973,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 6.077429,
+            "reference": 3e-06,
+            "robust_deviation": 6.077426,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 23.892708,
+            "reference": 77.541103,
+            "robust_deviation": -17.882798,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.394713,
+            "reference": 0.000203,
+            "robust_deviation": 2.78902,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -18.626682,
+            "reference": -11.572384,
+            "robust_deviation": -3.527149,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 70.001034,
+            "reference": 80.211137,
+            "robust_deviation": -3.403368,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 179.590339,
+        "f0_range_st": 6.449669,
+        "f0_slope_st_sec": -0.390329,
+        "rms_dbfs": -21.70268,
+        "jitter_local_pct": 1.77422,
+        "shimmer_local_pct": 0.111931,
+        "hnr_db": 21.675956,
+        "centroid_hz": 255.424986,
+        "spectral_tilt_db_oct": -17.430077,
+        "low_high_db": 80.104663,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000029",
+      "start": 14.0,
+      "end": 16.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 3.698834,
+          "f0_range_st": 6.449666,
+          "rms_dbfs": -8e-06,
+          "hnr_db": -18.621716,
+          "jitter_local_pct": 3.548034,
+          "shimmer_local_pct": 0.055335,
+          "centroid_hz": 0.227331,
+          "spectral_tilt_db_oct": -2.928847,
+          "low_high_db": -0.035491,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 1.849413,
+        "instability_index": 3.900842,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 179.590339,
+            "reference": 149.99967,
+            "robust_deviation": 3.698834,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 6.449669,
+            "reference": 3e-06,
+            "robust_deviation": 6.449666,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 21.675956,
+            "reference": 77.541103,
+            "robust_deviation": -18.621716,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.77422,
+            "reference": 0.000203,
+            "robust_deviation": 3.548034,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.430077,
+            "reference": -11.572384,
+            "robust_deviation": -2.928847,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 179.590339,
+        "f0_range_st": 6.449669,
+        "f0_slope_st_sec": -0.390329,
+        "rms_dbfs": -21.70268,
+        "jitter_local_pct": 1.77422,
+        "shimmer_local_pct": 0.111931,
+        "hnr_db": 21.675956,
+        "centroid_hz": 255.424986,
+        "spectral_tilt_db_oct": -17.430077,
+        "low_high_db": 80.104663,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000030",
+      "start": 14.5,
+      "end": 16.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 3.698834,
+          "f0_range_st": 6.449666,
+          "rms_dbfs": -8e-06,
+          "hnr_db": -18.621716,
+          "jitter_local_pct": 3.548034,
+          "shimmer_local_pct": 0.055335,
+          "centroid_hz": 0.227331,
+          "spectral_tilt_db_oct": -2.928847,
+          "low_high_db": -0.035491,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 1.849413,
+        "instability_index": 3.900842,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 179.590339,
+            "reference": 149.99967,
+            "robust_deviation": 3.698834,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 6.449669,
+            "reference": 3e-06,
+            "robust_deviation": 6.449666,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 21.675956,
+            "reference": 77.541103,
+            "robust_deviation": -18.621716,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.77422,
+            "reference": 0.000203,
+            "robust_deviation": 3.548034,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.430077,
+            "reference": -11.572384,
+            "robust_deviation": -2.928847,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 179.590339,
+        "f0_range_st": 6.449669,
+        "f0_slope_st_sec": -0.390329,
+        "rms_dbfs": -21.70268,
+        "jitter_local_pct": 1.77422,
+        "shimmer_local_pct": 0.111931,
+        "hnr_db": 21.675956,
+        "centroid_hz": 255.424986,
+        "spectral_tilt_db_oct": -17.430077,
+        "low_high_db": 80.104663,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000031",
+      "start": 15.0,
+      "end": 17.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 3.698834,
+          "f0_range_st": 6.449666,
+          "rms_dbfs": -8e-06,
+          "hnr_db": -18.621716,
+          "jitter_local_pct": 3.548034,
+          "shimmer_local_pct": 0.055335,
+          "centroid_hz": 0.227331,
+          "spectral_tilt_db_oct": -2.928847,
+          "low_high_db": -0.035491,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 1.849413,
+        "instability_index": 3.900842,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 179.590339,
+            "reference": 149.99967,
+            "robust_deviation": 3.698834,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 6.449669,
+            "reference": 3e-06,
+            "robust_deviation": 6.449666,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 21.675956,
+            "reference": 77.541103,
+            "robust_deviation": -18.621716,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.77422,
+            "reference": 0.000203,
+            "robust_deviation": 3.548034,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.430077,
+            "reference": -11.572384,
+            "robust_deviation": -2.928847,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 179.590339,
+        "f0_range_st": 6.449669,
+        "f0_slope_st_sec": -0.390329,
+        "rms_dbfs": -21.70268,
+        "jitter_local_pct": 1.77422,
+        "shimmer_local_pct": 0.111931,
+        "hnr_db": 21.675956,
+        "centroid_hz": 255.424986,
+        "spectral_tilt_db_oct": -17.430077,
+        "low_high_db": 80.104663,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000032",
+      "start": 15.5,
+      "end": 17.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 3.698834,
+          "f0_range_st": 6.449666,
+          "rms_dbfs": -8e-06,
+          "hnr_db": -18.621716,
+          "jitter_local_pct": 3.548034,
+          "shimmer_local_pct": 0.055335,
+          "centroid_hz": 0.227331,
+          "spectral_tilt_db_oct": -2.928847,
+          "low_high_db": -0.035491,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 1.849413,
+        "instability_index": 3.900842,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 179.590339,
+            "reference": 149.99967,
+            "robust_deviation": 3.698834,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 6.449669,
+            "reference": 3e-06,
+            "robust_deviation": 6.449666,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 21.675956,
+            "reference": 77.541103,
+            "robust_deviation": -18.621716,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.77422,
+            "reference": 0.000203,
+            "robust_deviation": 3.548034,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.430077,
+            "reference": -11.572384,
+            "robust_deviation": -2.928847,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 179.590339,
+        "f0_range_st": 6.449669,
+        "f0_slope_st_sec": -0.390329,
+        "rms_dbfs": -21.70268,
+        "jitter_local_pct": 1.77422,
+        "shimmer_local_pct": 0.111931,
+        "hnr_db": 21.675956,
+        "centroid_hz": 255.424986,
+        "spectral_tilt_db_oct": -17.430077,
+        "low_high_db": 80.104663,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000033",
+      "start": 16.0,
+      "end": 18.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 3.698834,
+          "f0_range_st": 6.449666,
+          "rms_dbfs": -8e-06,
+          "hnr_db": -18.621716,
+          "jitter_local_pct": 3.548034,
+          "shimmer_local_pct": 0.055335,
+          "centroid_hz": 0.227331,
+          "spectral_tilt_db_oct": -2.928847,
+          "low_high_db": -0.035491,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 1.849413,
+        "instability_index": 3.900842,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 179.590339,
+            "reference": 149.99967,
+            "robust_deviation": 3.698834,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 6.449669,
+            "reference": 3e-06,
+            "robust_deviation": 6.449666,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 21.675956,
+            "reference": 77.541103,
+            "robust_deviation": -18.621716,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.77422,
+            "reference": 0.000203,
+            "robust_deviation": 3.548034,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.430077,
+            "reference": -11.572384,
+            "robust_deviation": -2.928847,
+            "unit": "dB/octava"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 164.063885,
+        "f0_range_st": 6.077429,
+        "f0_slope_st_sec": -1.977198,
+        "rms_dbfs": -21.702674,
+        "jitter_local_pct": 1.389246,
+        "shimmer_local_pct": 0.106662,
+        "hnr_db": 23.892708,
+        "centroid_hz": 231.524656,
+        "spectral_tilt_db_oct": -18.561584,
+        "low_high_db": 69.958643,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000034",
+      "start": 16.5,
+      "end": 18.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 1.758027,
+          "f0_range_st": 6.077426,
+          "rms_dbfs": -6e-06,
+          "hnr_db": -17.882798,
+          "jitter_local_pct": 2.778086,
+          "shimmer_local_pct": 0.0527,
+          "centroid_hz": 0.10783,
+          "spectral_tilt_db_oct": -3.4946,
+          "low_high_db": -3.417498,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.879011,
+        "instability_index": 3.707696,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 6.077429,
+            "reference": 3e-06,
+            "robust_deviation": 6.077426,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 23.892708,
+            "reference": 77.541103,
+            "robust_deviation": -17.882798,
+            "unit": "dB"
+          },
+          {
+            "feature": "jitter_local_pct",
+            "observed": 1.389246,
+            "reference": 0.000203,
+            "robust_deviation": 2.778086,
+            "unit": "%"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -18.561584,
+            "reference": -11.572384,
+            "robust_deviation": -3.4946,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 69.958643,
+            "reference": 80.211137,
+            "robust_deviation": -3.417498,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 5.626602,
+        "f0_slope_st_sec": -2.473575,
+        "rms_dbfs": -21.702668,
+        "jitter_local_pct": 0.933299,
+        "shimmer_local_pct": 0.063429,
+        "hnr_db": 43.022321,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -18.262056,
+        "low_high_db": 69.961165,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000035",
+      "start": 17.0,
+      "end": 19.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 5.626599,
+          "rms_dbfs": -4e-06,
+          "hnr_db": -11.506261,
+          "jitter_local_pct": 1.866192,
+          "shimmer_local_pct": 0.031084,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -3.344836,
+          "low_high_db": -3.416657,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2e-06,
+        "instability_index": 3.380969,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 5.626602,
+            "reference": 3e-06,
+            "robust_deviation": 5.626599,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 43.022321,
+            "reference": 77.541103,
+            "robust_deviation": -11.506261,
+            "unit": "dB"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -18.262056,
+            "reference": -11.572384,
+            "robust_deviation": -3.344836,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 69.961165,
+            "reference": 80.211137,
+            "robust_deviation": -3.416657,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 4.093569,
+        "f0_slope_st_sec": -1.799247,
+        "rms_dbfs": -21.702662,
+        "jitter_local_pct": 0.477558,
+        "shimmer_local_pct": 0.03464,
+        "hnr_db": 77.541103,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -17.75867,
+        "low_high_db": 69.963689,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000036",
+      "start": 17.5,
+      "end": 19.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 4.093566,
+          "rms_dbfs": -2e-06,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.95471,
+          "shimmer_local_pct": 0.016689,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -3.093143,
+          "low_high_db": -3.415816,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -1e-06,
+        "instability_index": 1.266241,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 4.093569,
+            "reference": 3e-06,
+            "robust_deviation": 4.093566,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -17.75867,
+            "reference": -11.572384,
+            "robust_deviation": -3.093143,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 69.963689,
+            "reference": 80.211137,
+            "robust_deviation": -3.415816,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000037",
+      "start": 18.0,
+      "end": 20.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 1.2e-05,
+        "rms_dbfs": -22.952044,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": 77.541103,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.475867,
+        "low_high_db": 56.423928,
+        "low_energy_ratio": 0.242424,
+        "voiced_ratio": 0.756345
+      },
+      "invalid_reasons": {
+        "jitter_local_pct": "Se exige cobertura periódica >= 0.8.",
+        "shimmer_local_pct": "Se exige cobertura periódica >= 0.8."
+      },
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000038",
+      "start": 18.5,
+      "end": 20.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": -0.416463,
+          "hnr_db": 0.0,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -0.451741,
+          "low_high_db": -7.92907,
+          "low_energy_ratio": 2.42424
+        },
+        "activation_index": -0.208232,
+        "instability_index": 0.0,
+        "evidence": [
+          {
+            "feature": "low_high_db",
+            "observed": 56.423928,
+            "reference": 80.211137,
+            "robust_deviation": -7.92907,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 2.8e-05,
+        "rms_dbfs": -24.712956,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": 77.541103,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.428408,
+        "low_high_db": 54.657331,
+        "low_energy_ratio": 0.494949,
+        "voiced_ratio": 0.502538
+      },
+      "invalid_reasons": {
+        "jitter_local_pct": "Se exige cobertura periódica >= 0.8.",
+        "shimmer_local_pct": "Se exige cobertura periódica >= 0.8."
+      },
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000039",
+      "start": 19.0,
+      "end": 21.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": -1.003433,
+          "hnr_db": 0.0,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -0.428012,
+          "low_high_db": -8.517935,
+          "low_energy_ratio": 4.94949
+        },
+        "activation_index": -0.501717,
+        "instability_index": 0.0,
+        "evidence": [
+          {
+            "feature": "low_high_db",
+            "observed": 54.657331,
+            "reference": 80.211137,
+            "robust_deviation": -8.517935,
+            "unit": "dB"
+          },
+          {
+            "feature": "low_energy_ratio",
+            "observed": 0.494949,
+            "reference": 0.0,
+            "robust_deviation": 4.94949,
+            "unit": "proporción"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": null,
+        "f0_range_st": null,
+        "f0_slope_st_sec": null,
+        "rms_dbfs": -27.723256,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": null,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.361095,
+        "low_high_db": 51.617614,
+        "low_energy_ratio": 0.747475,
+        "voiced_ratio": 0.248731
+      },
+      "invalid_reasons": {
+        "f0_median_hz": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_range_st": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_slope_st_sec": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "hnr_db": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "jitter_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "shimmer_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente."
+      },
+      "quality": {
+        "eligible": false,
+        "clipping_ratio": 0.0,
+        "warnings": [
+          "COBERTURA_INSUFICIENTE_O_CALIDAD: no comparar como voz válida"
+        ]
+      },
+      "id": "W000040",
+      "start": 19.5,
+      "end": 21.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "abstain",
+        "reason": "Calidad/cobertura insuficiente",
+        "zscores": {},
+        "activation_index": null,
+        "instability_index": null,
+        "evidence": []
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": null,
+        "f0_range_st": null,
+        "f0_slope_st_sec": null,
+        "rms_dbfs": null,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": null,
+        "centroid_hz": null,
+        "spectral_tilt_db_oct": null,
+        "low_high_db": null,
+        "low_energy_ratio": 1.0,
+        "voiced_ratio": 0.0
+      },
+      "invalid_reasons": {
+        "f0_median_hz": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_range_st": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_slope_st_sec": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "hnr_db": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "jitter_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "shimmer_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "rms_dbfs": "Sin energía suficiente, banda no disponible o resultado indefinido.",
+        "centroid_hz": "Sin energía suficiente, banda no disponible o resultado indefinido.",
+        "spectral_tilt_db_oct": "Sin energía suficiente, banda no disponible o resultado indefinido.",
+        "low_high_db": "Sin energía suficiente, banda no disponible o resultado indefinido."
+      },
+      "quality": {
+        "eligible": false,
+        "clipping_ratio": 0.0,
+        "warnings": [
+          "COBERTURA_INSUFICIENTE_O_CALIDAD: no comparar como voz válida"
+        ]
+      },
+      "id": "W000041",
+      "start": 20.0,
+      "end": 22.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "abstain",
+        "reason": "Calidad/cobertura insuficiente",
+        "zscores": {},
+        "activation_index": null,
+        "instability_index": null,
+        "evidence": []
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": null,
+        "f0_range_st": null,
+        "f0_slope_st_sec": null,
+        "rms_dbfs": -27.723256,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": null,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.369299,
+        "low_high_db": 51.580419,
+        "low_energy_ratio": 0.747475,
+        "voiced_ratio": 0.243655
+      },
+      "invalid_reasons": {
+        "f0_median_hz": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_range_st": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_slope_st_sec": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "hnr_db": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "jitter_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "shimmer_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente."
+      },
+      "quality": {
+        "eligible": false,
+        "clipping_ratio": 0.0,
+        "warnings": [
+          "COBERTURA_INSUFICIENTE_O_CALIDAD: no comparar como voz válida"
+        ]
+      },
+      "id": "W000042",
+      "start": 20.5,
+      "end": 22.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "abstain",
+        "reason": "Calidad/cobertura insuficiente",
+        "zscores": {},
+        "activation_index": null,
+        "instability_index": null,
+        "evidence": []
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": null,
+        "f0_range_st": null,
+        "f0_slope_st_sec": null,
+        "rms_dbfs": -24.712956,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": null,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.433425,
+        "low_high_db": 54.641025,
+        "low_energy_ratio": 0.494949,
+        "voiced_ratio": 0.497462
+      },
+      "invalid_reasons": {
+        "f0_median_hz": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_range_st": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "f0_slope_st_sec": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "hnr_db": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "jitter_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente.",
+        "shimmer_local_pct": "Medición indefinida o ventana sin cobertura/calidad suficiente."
+      },
+      "quality": {
+        "eligible": false,
+        "clipping_ratio": 0.0,
+        "warnings": [
+          "COBERTURA_INSUFICIENTE_O_CALIDAD: no comparar como voz válida"
+        ]
+      },
+      "id": "W000043",
+      "start": 21.0,
+      "end": 23.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "abstain",
+        "reason": "Calidad/cobertura insuficiente",
+        "zscores": {},
+        "activation_index": null,
+        "instability_index": null,
+        "evidence": []
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.999656,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 3.2e-05,
+        "rms_dbfs": -22.952044,
+        "jitter_local_pct": null,
+        "shimmer_local_pct": null,
+        "hnr_db": 77.541103,
+        "centroid_hz": 210.22161,
+        "spectral_tilt_db_oct": -12.479602,
+        "low_high_db": 56.414483,
+        "low_energy_ratio": 0.242424,
+        "voiced_ratio": 0.751269
+      },
+      "invalid_reasons": {
+        "jitter_local_pct": "Se exige cobertura periódica >= 0.8.",
+        "shimmer_local_pct": "Se exige cobertura periódica >= 0.8."
+      },
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000044",
+      "start": 21.5,
+      "end": 23.5,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -2e-06,
+          "f0_range_st": 0.0,
+          "rms_dbfs": -0.416463,
+          "hnr_db": 0.0,
+          "centroid_hz": 0.001314,
+          "spectral_tilt_db_oct": -0.453609,
+          "low_high_db": -7.932218,
+          "low_energy_ratio": 2.42424
+        },
+        "activation_index": -0.208233,
+        "instability_index": 0.0,
+        "evidence": [
+          {
+            "feature": "low_high_db",
+            "observed": 56.414483,
+            "reference": 80.211137,
+            "robust_deviation": -7.932218,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001262,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000045",
+      "start": 22.0,
+      "end": 24.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.0,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001268,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000046",
+      "start": 22.5,
+      "end": 24.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 3e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 1e-06,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000202,
+        "shimmer_local_pct": 0.001268,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000047",
+      "start": 23.0,
+      "end": 24.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": 3e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 1e-06,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 149.99967,
+        "f0_range_st": 3e-06,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -21.702656,
+        "jitter_local_pct": 0.000203,
+        "shimmer_local_pct": 0.001266,
+        "hnr_db": 77.541103,
+        "centroid_hz": 209.958741,
+        "spectral_tilt_db_oct": -11.572384,
+        "low_high_db": 80.211137,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000048",
+      "start": 23.5,
+      "end": 24.0,
+      "speaker": "sintetico_A",
+      "target_speaker": "sintetico_A",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.0,
+          "low_high_db": 0.0,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C0001",
+      "start": 4.5,
+      "end": 6.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493894,
+          "reference": 3e-06,
+          "robust_deviation": 8.493891,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -16.698808,
+          "reference": -11.572384,
+          "robust_deviation": -2.563212,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 49.73249,
+          "reference": 80.211137,
+          "robust_deviation": -10.159549,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000010"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0002",
+      "start": 5.0,
+      "end": 7.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 196.603852,
+          "reference": 149.99967,
+          "robust_deviation": 5.825523,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493896,
+          "reference": 3e-06,
+          "robust_deviation": 8.493893,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.357212,
+          "reference": -11.572384,
+          "robust_deviation": -2.892414,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 51.845232,
+          "reference": 80.211137,
+          "robust_deviation": -9.455302,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000011"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0003",
+      "start": 5.5,
+      "end": 7.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000274,
+          "reference": 149.99967,
+          "robust_deviation": 11.875075,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493898,
+          "reference": 3e-06,
+          "robust_deviation": 8.493895,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -14.047107,
+          "reference": -21.702656,
+          "robust_deviation": 2.55185,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.767672,
+          "reference": -11.572384,
+          "robust_deviation": -3.097644,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 53.257066,
+          "reference": 80.211137,
+          "robust_deviation": -8.98469,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000012"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0004",
+      "start": 6.0,
+      "end": 11.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000301,
+          "reference": 149.99967,
+          "robust_deviation": 11.875079,
+          "unit": "Hz"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -12.988113,
+          "reference": -21.702656,
+          "robust_deviation": 2.904848,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 85.239012,
+          "reference": 77.541103,
+          "robust_deviation": 2.56597,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -25.611091,
+          "reference": -11.572384,
+          "robust_deviation": -7.019353,
+          "unit": "dB/octava"
+        }
+      ],
+      "window_ids": [
+        "W000013",
+        "W000014",
+        "W000015",
+        "W000016",
+        "W000017",
+        "W000018",
+        "W000019"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0005",
+      "start": 9.5,
+      "end": 11.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 245.000274,
+          "reference": 149.99967,
+          "robust_deviation": 11.875075,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493898,
+          "reference": 3e-06,
+          "robust_deviation": 8.493895,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -14.047105,
+          "reference": -21.702656,
+          "robust_deviation": 2.55185,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.771184,
+          "reference": -11.572384,
+          "robust_deviation": -3.0994,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 53.266339,
+          "reference": 80.211137,
+          "robust_deviation": -8.981599,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000020"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0006",
+      "start": 10.0,
+      "end": 12.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 244.384113,
+          "reference": 149.99967,
+          "robust_deviation": 11.798055,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493896,
+          "reference": 3e-06,
+          "robust_deviation": 8.493893,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.360649,
+          "reference": -11.572384,
+          "robust_deviation": -2.894132,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 51.858705,
+          "reference": 80.211137,
+          "robust_deviation": -9.450811,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000021"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0007",
+      "start": 10.5,
+      "end": 14.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 8.493894,
+          "reference": 3e-06,
+          "robust_deviation": 8.493891,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.830746,
+          "reference": -11.572384,
+          "robust_deviation": -3.129181,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 49.75572,
+          "reference": 80.211137,
+          "robust_deviation": -10.151806,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000022",
+        "W000026"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0008",
+      "start": 13.0,
+      "end": 15.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 5.626602,
+          "reference": 3e-06,
+          "robust_deviation": 5.626599,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 43.022321,
+          "reference": 77.541103,
+          "robust_deviation": -11.506261,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.330882,
+          "reference": -11.572384,
+          "robust_deviation": -3.379249,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 70.003581,
+          "reference": 80.211137,
+          "robust_deviation": -3.402519,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000027"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0009",
+      "start": 13.5,
+      "end": 15.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 6.077429,
+          "reference": 3e-06,
+          "robust_deviation": 6.077426,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 23.892708,
+          "reference": 77.541103,
+          "robust_deviation": -17.882798,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.394713,
+          "reference": 0.000203,
+          "robust_deviation": 2.78902,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.626682,
+          "reference": -11.572384,
+          "robust_deviation": -3.527149,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 70.001034,
+          "reference": 80.211137,
+          "robust_deviation": -3.403368,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000028"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0010",
+      "start": 14.0,
+      "end": 18.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 179.590339,
+          "reference": 149.99967,
+          "robust_deviation": 3.698834,
+          "unit": "Hz"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 6.449669,
+          "reference": 3e-06,
+          "robust_deviation": 6.449666,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 21.675956,
+          "reference": 77.541103,
+          "robust_deviation": -18.621716,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.77422,
+          "reference": 0.000203,
+          "robust_deviation": 3.548034,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.430077,
+          "reference": -11.572384,
+          "robust_deviation": -2.928847,
+          "unit": "dB/octava"
+        }
+      ],
+      "window_ids": [
+        "W000029",
+        "W000030",
+        "W000031",
+        "W000032",
+        "W000033"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0011",
+      "start": 16.5,
+      "end": 18.5,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 6.077429,
+          "reference": 3e-06,
+          "robust_deviation": 6.077426,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 23.892708,
+          "reference": 77.541103,
+          "robust_deviation": -17.882798,
+          "unit": "dB"
+        },
+        {
+          "feature": "jitter_local_pct",
+          "observed": 1.389246,
+          "reference": 0.000203,
+          "robust_deviation": 2.778086,
+          "unit": "%"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.561584,
+          "reference": -11.572384,
+          "robust_deviation": -3.4946,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.958643,
+          "reference": 80.211137,
+          "robust_deviation": -3.417498,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000034"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0012",
+      "start": 17.0,
+      "end": 19.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 5.626602,
+          "reference": 3e-06,
+          "robust_deviation": 5.626599,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 43.022321,
+          "reference": 77.541103,
+          "robust_deviation": -11.506261,
+          "unit": "dB"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -18.262056,
+          "reference": -11.572384,
+          "robust_deviation": -3.344836,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.961165,
+          "reference": 80.211137,
+          "robust_deviation": -3.416657,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000035"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0013",
+      "start": 17.5,
+      "end": 19.5,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_range_st",
+          "observed": 4.093569,
+          "reference": 3e-06,
+          "robust_deviation": 4.093566,
+          "unit": "semitonos"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -17.75867,
+          "reference": -11.572384,
+          "robust_deviation": -3.093143,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": 69.963689,
+          "reference": 80.211137,
+          "robust_deviation": -3.415816,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000036"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0014",
+      "start": 18.5,
+      "end": 20.5,
+      "level": "amarillo",
+      "priority": 1,
+      "summary": "Variación vocal: espectro",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 56.423928,
+          "reference": 80.211137,
+          "robust_deviation": -7.92907,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000038"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0015",
+      "start": 19.0,
+      "end": 21.0,
+      "level": "amarillo",
+      "priority": 2,
+      "summary": "Variación vocal: espectro, temporalidad",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 54.657331,
+          "reference": 80.211137,
+          "robust_deviation": -8.517935,
+          "unit": "dB"
+        },
+        {
+          "feature": "low_energy_ratio",
+          "observed": 0.494949,
+          "reference": 0.0,
+          "robust_deviation": 4.94949,
+          "unit": "proporción"
+        }
+      ],
+      "window_ids": [
+        "W000039"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    },
+    {
+      "id": "C0016",
+      "start": 21.5,
+      "end": 23.5,
+      "level": "amarillo",
+      "priority": 1,
+      "summary": "Variación vocal: espectro",
+      "evidence": [
+        {
+          "feature": "low_high_db",
+          "observed": 56.414483,
+          "reference": 80.211137,
+          "robust_deviation": -7.932218,
+          "unit": "dB"
+        }
+      ],
+      "window_ids": [
+        "W000044"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    }
+  ],
+  "affective_model": {
+    "status": "not_loaded",
+    "predictions": [],
+    "reason": "No se incluyen pesos entrenados ni validación de emociones."
+  },
+  "review_log": [],
+  "limitations": [
+    "Prueba de concepto de seminario. No hay validación afectiva en entrevistas reales.",
+    "Activación e inestabilidad descriptivas son índices heurísticos sin calibración psicológica.",
+    "Amarillo: candidato; naranja: segmento marcado por revisor; rojo: PIN aceptado por revisor.",
+    "Prioridad 1–3 es heurística y no expresa severidad clínica ni certeza.",
+    "Periodicidad y baja energía no son detección fiable de habla, emoción o engaño.",
+    "Jitter/shimmer en habla conectada y espectro dependen de vocal, canal y ruido.",
+    "Sólo se comparan ventanas atribuidas al hablante objetivo; no hay diarización automática.",
+    "Resolución de exportación 1 ms; resolución analítica y exactitud son diferentes."
+  ]
+}

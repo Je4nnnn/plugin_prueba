@@ -1,0 +1,136 @@
+C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui/perfil_aislado
+java.io.FileInputStream@56f77c27
+Proyectos contenidos: 
+[C:\Users\Yvn\Desktop\SEMINARIO\plugin_prueba\validacion\embox_gui\copia_proyecto]
+Se eligió el proyecto a trabajar
+Valro de controller: C:\Users\Yvn\Desktop\SEMINARIO\plugin_prueba\validacion\embox_gui\copia_proyecto
+Count:1[file:/C:/Users/Yvn/Desktop/SEMINARIO/EMBOX_LOCAL/app/plugins/audioplugin-1.0-SNAPSHOT.jar]
+1) cargarCanales::CanalModel: Audio PlugIn
+canalModel.getName() : Audio PlugIn
+source.getString("canal") : Audio PlugIn
+New overlapLength192
+Canal: Audio PlugIn ;pathToSource: C:\Users\Yvn\Desktop\SEMINARIO\plugin_prueba\validacion\embox_gui\copia_proyecto\audio_8cbba4b10240b8b9.wav ;sourceLength:24.0 ;color:0x81b622ff
+Timeline element del audioplugin: TimelineElement@27123692
+Preprocesamiento listo
+Timeline lengt Audio PlugIn: 24.0	0.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 0.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+1900.0
+Cantidad de marcadores: 86
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+Cargando tags...2
+CanalTags: [Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=395.8333333333333, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=316.6666666666667, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff], Rectangle[x=0.0, y=0.0, width=158.33333333333334, height=50.0, fill=0x008080ff]]
+Timeline lengt Audio PlugIn: 24.0	1900.0
+Nuevo width: 1900.0
+Nuevo timelineelement width: 1900.0
+Nuevo rect width: 1900.0
+Timeline length: 24.0	1900.0
+1900.0
+Cantidad de marcadores: 86
+PROYECTO_REAL_FXML_SPI_AUDIO_Y_TAGS_VERIFICADOS

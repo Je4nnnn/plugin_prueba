@@ -1,0 +1,10 @@
+"-Duser.home=C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui/final_17/perfil_aislado"
+"-Djava.library.path=C:/Users/Yvn/Desktop/SEMINARIO/EMBOX_LOCAL/app/nativos;C:/Users/Yvn/Desktop/SEMINARIO/EMBOX_LOCAL/gstreamer/PFiles64/gstreamer/1.0/msvc_x86_64/bin"
+"-Dgstreamer.path=C:/Users/Yvn/Desktop/SEMINARIO/EMBOX_LOCAL/gstreamer/PFiles64/gstreamer/1.0/msvc_x86_64/bin"
+-Dfile.encoding=UTF-8
+-cp
+"C:/Users/Yvn/Desktop/SEMINARIO/EMBOX_LOCAL/app/lib/*;C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui"
+VerificarProyecto
+"C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui/final_17/copia_proyecto/project.json"
+"C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui/final_17/resultado_reapertura.json"
+"C:/Users/Yvn/Desktop/SEMINARIO/plugin_prueba/validacion/embox_gui/final_17/snapshot_reapertura.png"

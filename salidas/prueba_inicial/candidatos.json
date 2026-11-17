@@ -1,0 +1,83 @@
+{
+  "source_sha256": "6c632be6654e26b2bd63acbc1c09655c96b7c4ef7c347f074c3dc0822692b969",
+  "candidates": [
+    {
+      "id": "C0001",
+      "start": 4.0,
+      "end": 10.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 239.907938,
+          "reference": 130.000448,
+          "robust_deviation": 13.738436,
+          "unit": "Hz"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -4.306479,
+          "reference": -12.259214,
+          "robust_deviation": 2.650912,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 15.833719,
+          "reference": 89.6026,
+          "robust_deviation": -24.589627,
+          "unit": "dB"
+        },
+        {
+          "feature": "centroid_hz",
+          "observed": 6644.924154,
+          "reference": 208.119606,
+          "robust_deviation": 32.184023,
+          "unit": "Hz"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -3.283744,
+          "reference": -16.573707,
+          "robust_deviation": 6.644981,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": -4.201917,
+          "reference": 84.03502,
+          "robust_deviation": -29.412312,
+          "unit": "dB"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 10.610024,
+          "reference": 1.3e-05,
+          "robust_deviation": 10.610011,
+          "unit": "semitonos"
+        }
+      ],
+      "window_ids": [
+        "W000009",
+        "W000010",
+        "W000011",
+        "W000012",
+        "W000014",
+        "W000015",
+        "W000016",
+        "W000017",
+        "W000018",
+        "W000019",
+        "W000020"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    }
+  ]
+}

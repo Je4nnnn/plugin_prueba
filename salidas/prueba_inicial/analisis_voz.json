@@ -1,0 +1,1603 @@
+{
+  "schema_version": "vozafecto-0.1",
+  "software": {
+    "name": "EMBox Voz Afectiva",
+    "version": "0.1.0",
+    "python": "3.12.10",
+    "numpy": "2.2.6",
+    "parselmouth": "0.4.7",
+    "praat": "6.1.38"
+  },
+  "created_at": "2026-11-17T08:42:27.469997+00:00",
+  "source": {
+    "path": "C:\\Users\\Yvn\\Desktop\\SEMINARIO\\F0_y_variacion\\test_audio.wav",
+    "sha256": "6c632be6654e26b2bd63acbc1c09655c96b7c4ef7c347f074c3dc0822692b969",
+    "duration_sec": 10.0,
+    "sample_rate": 44100,
+    "channels": 1,
+    "selected_channel": 0,
+    "decoder": "libsndfile",
+    "normalization": "ninguna",
+    "sample_count": 441000
+  },
+  "config": {
+    "window_sec": 2.0,
+    "step_sec": 0.5,
+    "frame_sec": 0.01,
+    "pitch_floor": 60.0,
+    "pitch_ceiling": 500.0,
+    "silence_dbfs": -45.0,
+    "minimum_voiced": 0.5,
+    "clipping_limit": 0.01,
+    "robust_threshold": 2.5,
+    "channel": 0
+  },
+  "speaker_mode": "single_speaker_user_declared",
+  "turns_source": null,
+  "baseline": {
+    "start": 0.0,
+    "end": 4.0,
+    "valid_subwindows": 4,
+    "subwindow_sec": 1.0,
+    "statistics": {
+      "f0_median_hz": {
+        "median": 130.000448,
+        "mad": 0.0,
+        "scale": 8.0,
+        "scale_floor": 8.0,
+        "n_valid": 4
+      },
+      "f0_range_st": {
+        "median": 1.3e-05,
+        "mad": 0.0,
+        "scale": 1.0,
+        "scale_floor": 1.0,
+        "n_valid": 4
+      },
+      "rms_dbfs": {
+        "median": -12.259214,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 4
+      },
+      "hnr_db": {
+        "median": 89.6026,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 4
+      },
+      "jitter_local_pct": {
+        "median": 7e-05,
+        "mad": 0.0,
+        "scale": 0.5,
+        "scale_floor": 0.5,
+        "n_valid": 4
+      },
+      "shimmer_local_pct": {
+        "median": 0.000344,
+        "mad": 0.0,
+        "scale": 2.0,
+        "scale_floor": 2.0,
+        "n_valid": 4
+      },
+      "centroid_hz": {
+        "median": 208.119606,
+        "mad": 0.0,
+        "scale": 200.0,
+        "scale_floor": 200.0,
+        "n_valid": 4
+      },
+      "spectral_tilt_db_oct": {
+        "median": -16.573707,
+        "mad": 0.0,
+        "scale": 2.0,
+        "scale_floor": 2.0,
+        "n_valid": 4
+      },
+      "low_high_db": {
+        "median": 84.03502,
+        "mad": 0.0,
+        "scale": 3.0,
+        "scale_floor": 3.0,
+        "n_valid": 4
+      },
+      "low_energy_ratio": {
+        "median": 0.0,
+        "mad": 0.0,
+        "scale": 0.1,
+        "scale_floor": 0.1,
+        "n_valid": 4
+      }
+    },
+    "meaning": "Referencia descriptiva seleccionada; neutralidad no presumida.",
+    "speaker": "hablante_1"
+  },
+  "feature_dictionary": {
+    "f0_median_hz": {
+      "unit": "Hz",
+      "definition": "Mediana F0 en cuadros periódicos"
+    },
+    "f0_range_st": {
+      "unit": "semitonos",
+      "definition": "12 log2(p90/p10) de F0"
+    },
+    "f0_slope_st_sec": {
+      "unit": "semitonos/s",
+      "definition": "Regresión del contorno F0 sonoro, sin interpolar huecos"
+    },
+    "rms_dbfs": {
+      "unit": "dBFS",
+      "definition": "20 log10(RMS); referencia amplitud digital 1, sin calibración SPL"
+    },
+    "jitter_local_pct": {
+      "unit": "%",
+      "definition": "Perturbación local de períodos, Praat"
+    },
+    "shimmer_local_pct": {
+      "unit": "%",
+      "definition": "Perturbación local de amplitudes, Praat"
+    },
+    "hnr_db": {
+      "unit": "dB",
+      "definition": "Mediana de armonicidad CC en cuadros periódicos"
+    },
+    "centroid_hz": {
+      "unit": "Hz",
+      "definition": "Centroide de magnitud STFT, cuadros con energía"
+    },
+    "spectral_tilt_db_oct": {
+      "unit": "dB/octava",
+      "definition": "Ajuste log2(f) de espectro de potencia entre 500–4000 Hz"
+    },
+    "low_high_db": {
+      "unit": "dB",
+      "definition": "10 log10 potencia 50–1000 / 1000–5000 Hz"
+    },
+    "low_energy_ratio": {
+      "unit": "proporción",
+      "definition": "Cuadros RMS bajo umbral fijo; no equivale a ausencia de habla"
+    },
+    "voiced_ratio": {
+      "unit": "proporción",
+      "definition": "Cuadros con periodicidad estimada; no equivale a VAD"
+    }
+  },
+  "windows": [
+    {
+      "measures": {
+        "f0_median_hz": 130.000448,
+        "f0_range_st": 1.3e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.259214,
+        "jitter_local_pct": 6.9e-05,
+        "shimmer_local_pct": 0.000341,
+        "hnr_db": 89.6026,
+        "centroid_hz": 208.119606,
+        "spectral_tilt_db_oct": -16.568892,
+        "low_high_db": 84.057999,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000001",
+      "start": 0.0,
+      "end": 2.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": -2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.002407,
+          "low_high_db": 0.00766,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000448,
+        "f0_range_st": 1.3e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.259214,
+        "jitter_local_pct": 6.9e-05,
+        "shimmer_local_pct": 0.000341,
+        "hnr_db": 89.6026,
+        "centroid_hz": 208.119606,
+        "spectral_tilt_db_oct": -16.568892,
+        "low_high_db": 84.057999,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000002",
+      "start": 0.5,
+      "end": 2.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": -2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.002407,
+          "low_high_db": 0.00766,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000448,
+        "f0_range_st": 1.3e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.259214,
+        "jitter_local_pct": 6.9e-05,
+        "shimmer_local_pct": 0.000341,
+        "hnr_db": 89.6026,
+        "centroid_hz": 208.119606,
+        "spectral_tilt_db_oct": -16.568892,
+        "low_high_db": 84.057999,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000003",
+      "start": 1.0,
+      "end": 3.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": -2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.002407,
+          "low_high_db": 0.00766,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000448,
+        "f0_range_st": 1.3e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.259214,
+        "jitter_local_pct": 6.9e-05,
+        "shimmer_local_pct": 0.000341,
+        "hnr_db": 89.6026,
+        "centroid_hz": 208.119606,
+        "spectral_tilt_db_oct": -16.568892,
+        "low_high_db": 84.057999,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000004",
+      "start": 1.5,
+      "end": 3.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": -2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.002407,
+          "low_high_db": 0.00766,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000448,
+        "f0_range_st": 1.3e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.259214,
+        "jitter_local_pct": 6.9e-05,
+        "shimmer_local_pct": 0.000341,
+        "hnr_db": 89.6026,
+        "centroid_hz": 208.119606,
+        "spectral_tilt_db_oct": -16.568892,
+        "low_high_db": 84.057999,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000005",
+      "start": 2.0,
+      "end": 4.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 0.0,
+          "f0_range_st": 0.0,
+          "rms_dbfs": 0.0,
+          "hnr_db": 0.0,
+          "jitter_local_pct": -2e-06,
+          "shimmer_local_pct": -2e-06,
+          "centroid_hz": 0.0,
+          "spectral_tilt_db_oct": 0.002407,
+          "low_high_db": 0.00766,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.0,
+        "instability_index": 0.0,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000465,
+        "f0_range_st": 10.607576,
+        "f0_slope_st_sec": 5.998263,
+        "rms_dbfs": -8.622493,
+        "jitter_local_pct": 0.040758,
+        "shimmer_local_pct": 0.003151,
+        "hnr_db": 85.779775,
+        "centroid_hz": 208.345118,
+        "spectral_tilt_db_oct": -4.493489,
+        "low_high_db": 0.523056,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000006",
+      "start": 2.5,
+      "end": 4.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 2e-06,
+          "f0_range_st": 10.607563,
+          "rms_dbfs": 1.21224,
+          "hnr_db": -1.274275,
+          "jitter_local_pct": 0.081376,
+          "shimmer_local_pct": 0.001404,
+          "centroid_hz": 0.001128,
+          "spectral_tilt_db_oct": 6.040109,
+          "low_high_db": -27.837321,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.606121,
+        "instability_index": 1.839264,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 10.607576,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.607563,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -4.493489,
+            "reference": -16.573707,
+            "robust_deviation": 6.040109,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 0.523056,
+            "reference": 84.03502,
+            "robust_deviation": -27.837321,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 184.924702,
+        "f0_range_st": 10.60881,
+        "f0_slope_st_sec": 8.077196,
+        "rms_dbfs": -6.671362,
+        "jitter_local_pct": 0.033568,
+        "shimmer_local_pct": 0.071035,
+        "hnr_db": 38.184965,
+        "centroid_hz": 5001.704084,
+        "spectral_tilt_db_oct": -4.133421,
+        "low_high_db": -2.036859,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000007",
+      "start": 3.0,
+      "end": 5.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 6.865532,
+          "f0_range_st": 10.608797,
+          "rms_dbfs": 1.862617,
+          "hnr_db": -17.139212,
+          "jitter_local_pct": 0.066996,
+          "shimmer_local_pct": 0.035346,
+          "centroid_hz": 23.967922,
+          "spectral_tilt_db_oct": 6.220143,
+          "low_high_db": -28.690626,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 3.931309,
+        "instability_index": 3.025586,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 184.924702,
+            "reference": 130.000448,
+            "robust_deviation": 6.865532,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 10.60881,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.608797,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 38.184965,
+            "reference": 89.6026,
+            "robust_deviation": -17.139212,
+            "unit": "dB"
+          },
+          {
+            "feature": "centroid_hz",
+            "observed": 5001.704084,
+            "reference": 208.119606,
+            "robust_deviation": 23.967922,
+            "unit": "Hz"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -4.133421,
+            "reference": -16.573707,
+            "robust_deviation": 6.220143,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": -2.036859,
+            "reference": 84.03502,
+            "robust_deviation": -28.690626,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 239.90772,
+        "f0_range_st": 10.610036,
+        "f0_slope_st_sec": 5.998331,
+        "rms_dbfs": -5.3299,
+        "jitter_local_pct": 6.7e-05,
+        "shimmer_local_pct": 0.004113,
+        "hnr_db": 15.836369,
+        "centroid_hz": 6606.948957,
+        "spectral_tilt_db_oct": -3.9568,
+        "low_high_db": -3.362896,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000008",
+      "start": 3.5,
+      "end": 5.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": true,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 13.738409,
+          "f0_range_st": 10.610023,
+          "rms_dbfs": 2.309771,
+          "hnr_db": -24.588744,
+          "jitter_local_pct": -6e-06,
+          "shimmer_local_pct": 0.001885,
+          "centroid_hz": 31.994147,
+          "spectral_tilt_db_oct": 6.308453,
+          "low_high_db": -29.132639,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.154885,
+        "instability_index": 3.000471,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 239.90772,
+            "reference": 130.000448,
+            "robust_deviation": 13.738409,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 10.610036,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.610023,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 15.836369,
+            "reference": 89.6026,
+            "robust_deviation": -24.588744,
+            "unit": "dB"
+          },
+          {
+            "feature": "centroid_hz",
+            "observed": 6606.948957,
+            "reference": 208.119606,
+            "robust_deviation": 31.994147,
+            "unit": "Hz"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -3.9568,
+            "reference": -16.573707,
+            "robust_deviation": 6.308453,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": -3.362896,
+            "reference": 84.03502,
+            "robust_deviation": -29.132639,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 239.907938,
+        "f0_range_st": 0.002615,
+        "f0_slope_st_sec": 8e-06,
+        "rms_dbfs": -4.306479,
+        "jitter_local_pct": 7e-05,
+        "shimmer_local_pct": 0.003633,
+        "hnr_db": 15.833719,
+        "centroid_hz": 6644.924154,
+        "spectral_tilt_db_oct": -3.283744,
+        "low_high_db": -4.201917,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000009",
+      "start": 4.0,
+      "end": 6.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 13.738436,
+          "f0_range_st": 0.002602,
+          "rms_dbfs": 2.650912,
+          "hnr_db": -24.589627,
+          "jitter_local_pct": 0.0,
+          "shimmer_local_pct": 0.001644,
+          "centroid_hz": 32.184023,
+          "spectral_tilt_db_oct": 6.644981,
+          "low_high_db": -29.412312,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.325456,
+        "instability_index": 1.501062,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 239.907938,
+            "reference": 130.000448,
+            "robust_deviation": 13.738436,
+            "unit": "Hz"
+          },
+          {
+            "feature": "rms_dbfs",
+            "observed": -4.306479,
+            "reference": -12.259214,
+            "robust_deviation": 2.650912,
+            "unit": "dBFS"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 15.833719,
+            "reference": 89.6026,
+            "robust_deviation": -24.589627,
+            "unit": "dB"
+          },
+          {
+            "feature": "centroid_hz",
+            "observed": 6644.924154,
+            "reference": 208.119606,
+            "robust_deviation": 32.184023,
+            "unit": "Hz"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -3.283744,
+            "reference": -16.573707,
+            "robust_deviation": 6.644981,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": -4.201917,
+            "reference": 84.03502,
+            "robust_deviation": -29.412312,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 239.90772,
+        "f0_range_st": 10.610024,
+        "f0_slope_st_sec": -5.914004,
+        "rms_dbfs": -5.341768,
+        "jitter_local_pct": 0.057848,
+        "shimmer_local_pct": 0.003851,
+        "hnr_db": 15.836369,
+        "centroid_hz": 6606.948957,
+        "spectral_tilt_db_oct": -3.93067,
+        "low_high_db": -3.414094,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000010",
+      "start": 4.5,
+      "end": 6.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 13.738409,
+          "f0_range_st": 10.610011,
+          "rms_dbfs": 2.305815,
+          "hnr_db": -24.588744,
+          "jitter_local_pct": 0.115556,
+          "shimmer_local_pct": 0.001753,
+          "centroid_hz": 31.994147,
+          "spectral_tilt_db_oct": 6.321518,
+          "low_high_db": -29.149705,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 4.152907,
+        "instability_index": 3.029327,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 239.90772,
+            "reference": 130.000448,
+            "robust_deviation": 13.738409,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 10.610024,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.610011,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 15.836369,
+            "reference": 89.6026,
+            "robust_deviation": -24.588744,
+            "unit": "dB"
+          },
+          {
+            "feature": "centroid_hz",
+            "observed": 6606.948957,
+            "reference": 208.119606,
+            "robust_deviation": 31.994147,
+            "unit": "Hz"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -3.93067,
+            "reference": -16.573707,
+            "robust_deviation": 6.321518,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": -3.414094,
+            "reference": 84.03502,
+            "robust_deviation": -29.149705,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 239.857957,
+        "f0_range_st": 10.608795,
+        "f0_slope_st_sec": -8.07635,
+        "rms_dbfs": -6.703762,
+        "jitter_local_pct": 0.046902,
+        "shimmer_local_pct": 0.069333,
+        "hnr_db": 15.953709,
+        "centroid_hz": 6022.734739,
+        "spectral_tilt_db_oct": -4.098328,
+        "low_high_db": -2.146148,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000011",
+      "start": 5.0,
+      "end": 7.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 13.732189,
+          "f0_range_st": 10.608782,
+          "rms_dbfs": 1.851817,
+          "hnr_db": -24.54963,
+          "jitter_local_pct": 0.093664,
+          "shimmer_local_pct": 0.034495,
+          "centroid_hz": 29.073076,
+          "spectral_tilt_db_oct": 6.237689,
+          "low_high_db": -28.727056,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 3.925909,
+        "instability_index": 3.03204,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 239.857957,
+            "reference": 130.000448,
+            "robust_deviation": 13.732189,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 10.608795,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.608782,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 15.953709,
+            "reference": 89.6026,
+            "robust_deviation": -24.54963,
+            "unit": "dB"
+          },
+          {
+            "feature": "centroid_hz",
+            "observed": 6022.734739,
+            "reference": 208.119606,
+            "robust_deviation": 29.073076,
+            "unit": "Hz"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -4.098328,
+            "reference": -16.573707,
+            "robust_deviation": 6.237689,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": -2.146148,
+            "reference": 84.03502,
+            "robust_deviation": -28.727056,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000547,
+        "f0_range_st": 10.607565,
+        "f0_slope_st_sec": -6.080863,
+        "rms_dbfs": -8.699046,
+        "jitter_local_pct": 0.00183,
+        "shimmer_local_pct": 0.243472,
+        "hnr_db": 88.840018,
+        "centroid_hz": 176.765778,
+        "spectral_tilt_db_oct": -4.438035,
+        "low_high_db": 0.327733,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 0.994924
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000012",
+      "start": 5.5,
+      "end": 7.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 1.2e-05,
+          "f0_range_st": 10.607552,
+          "rms_dbfs": 1.186723,
+          "hnr_db": -0.254194,
+          "jitter_local_pct": 0.00352,
+          "shimmer_local_pct": 0.121564,
+          "centroid_hz": -0.156769,
+          "spectral_tilt_db_oct": 6.067836,
+          "low_high_db": -27.902429,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": 0.593367,
+        "instability_index": 1.59482,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 10.607565,
+            "reference": 1.3e-05,
+            "robust_deviation": 10.607552,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "spectral_tilt_db_oct",
+            "observed": -4.438035,
+            "reference": -16.573707,
+            "robust_deviation": 6.067836,
+            "unit": "dB/octava"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 0.327733,
+            "reference": 84.03502,
+            "robust_deviation": -27.902429,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000533,
+        "f0_range_st": 1.4e-05,
+        "f0_slope_st_sec": -0.0,
+        "rms_dbfs": -12.499489,
+        "jitter_local_pct": 3.1e-05,
+        "shimmer_local_pct": 0.000357,
+        "hnr_db": 89.179155,
+        "centroid_hz": 176.572454,
+        "spectral_tilt_db_oct": -14.95349,
+        "low_high_db": 84.539552,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000013",
+      "start": 6.0,
+      "end": 8.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 1.1e-05,
+          "f0_range_st": 1e-06,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -0.141148,
+          "jitter_local_pct": -7.8e-05,
+          "shimmer_local_pct": 6e-06,
+          "centroid_hz": -0.157736,
+          "spectral_tilt_db_oct": 0.810108,
+          "low_high_db": 0.168177,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -0.04004,
+        "instability_index": 0.035289,
+        "evidence": [],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 130.000531,
+        "f0_range_st": 7.355838,
+        "f0_slope_st_sec": -4.12822,
+        "rms_dbfs": -12.499489,
+        "jitter_local_pct": 0.034792,
+        "shimmer_local_pct": 0.003936,
+        "hnr_db": 88.840018,
+        "centroid_hz": 176.357344,
+        "spectral_tilt_db_oct": -12.785571,
+        "low_high_db": 68.6056,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000014",
+      "start": 6.5,
+      "end": 8.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": 1e-05,
+          "f0_range_st": 7.355825,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -0.254194,
+          "jitter_local_pct": 0.069444,
+          "shimmer_local_pct": 0.001796,
+          "centroid_hz": -0.158811,
+          "spectral_tilt_db_oct": 1.894068,
+          "low_high_db": -5.14314,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -0.040041,
+        "instability_index": 1.581358,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 7.355838,
+            "reference": 1.3e-05,
+            "robust_deviation": 7.355825,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 68.6056,
+            "reference": 84.03502,
+            "robust_deviation": -5.14314,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 127.735027,
+        "f0_range_st": 7.355841,
+        "f0_slope_st_sec": -5.600827,
+        "rms_dbfs": -12.49949,
+        "jitter_local_pct": 0.034897,
+        "shimmer_local_pct": 0.00426,
+        "hnr_db": 82.552131,
+        "centroid_hz": 176.056433,
+        "spectral_tilt_db_oct": -12.735256,
+        "low_high_db": 68.52214,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000015",
+      "start": 7.0,
+      "end": 9.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -0.283178,
+          "f0_range_st": 7.355828,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.350156,
+          "jitter_local_pct": 0.069654,
+          "shimmer_local_pct": 0.001958,
+          "centroid_hz": -0.160316,
+          "spectral_tilt_db_oct": 1.919225,
+          "low_high_db": -5.17096,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -0.181635,
+        "instability_index": 2.105442,
+        "evidence": [
+          {
+            "feature": "f0_range_st",
+            "observed": 7.355841,
+            "reference": 1.3e-05,
+            "robust_deviation": 7.355828,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 68.52214,
+            "reference": 84.03502,
+            "robust_deviation": -5.17096,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 84.999847,
+        "f0_range_st": 7.355833,
+        "f0_slope_st_sec": -4.186976,
+        "rms_dbfs": -12.49949,
+        "jitter_local_pct": 0.034757,
+        "shimmer_local_pct": 0.004772,
+        "hnr_db": 81.238878,
+        "centroid_hz": 116.275676,
+        "spectral_tilt_db_oct": -12.681991,
+        "low_high_db": 68.439796,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000016",
+      "start": 7.5,
+      "end": 9.5,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -5.625075,
+          "f0_range_st": 7.35582,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.787907,
+          "jitter_local_pct": 0.069374,
+          "shimmer_local_pct": 0.002214,
+          "centroid_hz": -0.45922,
+          "spectral_tilt_db_oct": 1.945858,
+          "low_high_db": -5.198408,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2.852583,
+        "instability_index": 2.214874,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 84.999847,
+            "reference": 130.000448,
+            "robust_deviation": -5.625075,
+            "unit": "Hz"
+          },
+          {
+            "feature": "f0_range_st",
+            "observed": 7.355833,
+            "reference": 1.3e-05,
+            "robust_deviation": 7.35582,
+            "unit": "semitonos"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 81.238878,
+            "reference": 89.6026,
+            "robust_deviation": -2.787907,
+            "unit": "dB"
+          },
+          {
+            "feature": "low_high_db",
+            "observed": 68.439796,
+            "reference": 84.03502,
+            "robust_deviation": -5.198408,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 84.999837,
+        "f0_range_st": 1e-05,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.499491,
+        "jitter_local_pct": 2.7e-05,
+        "shimmer_local_pct": 0.000252,
+        "hnr_db": 81.157134,
+        "centroid_hz": 116.184077,
+        "spectral_tilt_db_oct": -12.045198,
+        "low_high_db": 88.882612,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000017",
+      "start": 8.0,
+      "end": 10.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -5.625076,
+          "f0_range_st": -3e-06,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.815155,
+          "jitter_local_pct": -8.6e-05,
+          "shimmer_local_pct": -4.6e-05,
+          "centroid_hz": -0.459678,
+          "spectral_tilt_db_oct": 2.264254,
+          "low_high_db": 1.615864,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2.852584,
+        "instability_index": 0.703789,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 84.999837,
+            "reference": 130.000448,
+            "robust_deviation": -5.625076,
+            "unit": "Hz"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 81.157134,
+            "reference": 89.6026,
+            "robust_deviation": -2.815155,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 84.999837,
+        "f0_range_st": 1e-05,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.499491,
+        "jitter_local_pct": 2.7e-05,
+        "shimmer_local_pct": 0.00025,
+        "hnr_db": 81.157134,
+        "centroid_hz": 116.172656,
+        "spectral_tilt_db_oct": -12.019833,
+        "low_high_db": 88.919288,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000018",
+      "start": 8.5,
+      "end": 10.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -5.625076,
+          "f0_range_st": -3e-06,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.815155,
+          "jitter_local_pct": -8.6e-05,
+          "shimmer_local_pct": -4.7e-05,
+          "centroid_hz": -0.459735,
+          "spectral_tilt_db_oct": 2.276937,
+          "low_high_db": 1.628089,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2.852584,
+        "instability_index": 0.703789,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 84.999837,
+            "reference": 130.000448,
+            "robust_deviation": -5.625076,
+            "unit": "Hz"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 81.157134,
+            "reference": 89.6026,
+            "robust_deviation": -2.815155,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 84.999837,
+        "f0_range_st": 1e-05,
+        "f0_slope_st_sec": 0.0,
+        "rms_dbfs": -12.499491,
+        "jitter_local_pct": 2.7e-05,
+        "shimmer_local_pct": 0.000249,
+        "hnr_db": 81.157134,
+        "centroid_hz": 116.184077,
+        "spectral_tilt_db_oct": -12.05881,
+        "low_high_db": 88.870661,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000019",
+      "start": 9.0,
+      "end": 10.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -5.625076,
+          "f0_range_st": -3e-06,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.815155,
+          "jitter_local_pct": -8.6e-05,
+          "shimmer_local_pct": -4.8e-05,
+          "centroid_hz": -0.459678,
+          "spectral_tilt_db_oct": 2.257448,
+          "low_high_db": 1.61188,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2.852584,
+        "instability_index": 0.703789,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 84.999837,
+            "reference": 130.000448,
+            "robust_deviation": -5.625076,
+            "unit": "Hz"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 81.157134,
+            "reference": 89.6026,
+            "robust_deviation": -2.815155,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    },
+    {
+      "measures": {
+        "f0_median_hz": 84.999837,
+        "f0_range_st": 1e-05,
+        "f0_slope_st_sec": 1e-06,
+        "rms_dbfs": -12.499491,
+        "jitter_local_pct": 2.6e-05,
+        "shimmer_local_pct": 0.000245,
+        "hnr_db": 81.157134,
+        "centroid_hz": 116.172656,
+        "spectral_tilt_db_oct": -11.994556,
+        "low_high_db": 88.971835,
+        "low_energy_ratio": 0.0,
+        "voiced_ratio": 1.0
+      },
+      "invalid_reasons": {},
+      "quality": {
+        "eligible": true,
+        "clipping_ratio": 0.0,
+        "warnings": []
+      },
+      "id": "W000020",
+      "start": 9.5,
+      "end": 10.0,
+      "speaker": "hablante_1",
+      "target_speaker": "hablante_1",
+      "context": [],
+      "is_reference": false,
+      "comparison": {
+        "status": "descriptive",
+        "zscores": {
+          "f0_median_hz": -5.625076,
+          "f0_range_st": -3e-06,
+          "rms_dbfs": -0.080092,
+          "hnr_db": -2.815155,
+          "jitter_local_pct": -8.8e-05,
+          "shimmer_local_pct": -5e-05,
+          "centroid_hz": -0.459735,
+          "spectral_tilt_db_oct": 2.289575,
+          "low_high_db": 1.645605,
+          "low_energy_ratio": 0.0
+        },
+        "activation_index": -2.852584,
+        "instability_index": 0.703789,
+        "evidence": [
+          {
+            "feature": "f0_median_hz",
+            "observed": 84.999837,
+            "reference": 130.000448,
+            "robust_deviation": -5.625076,
+            "unit": "Hz"
+          },
+          {
+            "feature": "hnr_db",
+            "observed": 81.157134,
+            "reference": 89.6026,
+            "robust_deviation": -2.815155,
+            "unit": "dB"
+          }
+        ],
+        "interpretation": "Índices exploratorios de contraste vocal; no estiman estado interno, valencia ni certeza."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C0001",
+      "start": 4.0,
+      "end": 10.0,
+      "level": "amarillo",
+      "priority": 3,
+      "summary": "Variación vocal: calidad, energía, espectro, prosodia",
+      "evidence": [
+        {
+          "feature": "f0_median_hz",
+          "observed": 239.907938,
+          "reference": 130.000448,
+          "robust_deviation": 13.738436,
+          "unit": "Hz"
+        },
+        {
+          "feature": "rms_dbfs",
+          "observed": -4.306479,
+          "reference": -12.259214,
+          "robust_deviation": 2.650912,
+          "unit": "dBFS"
+        },
+        {
+          "feature": "hnr_db",
+          "observed": 15.833719,
+          "reference": 89.6026,
+          "robust_deviation": -24.589627,
+          "unit": "dB"
+        },
+        {
+          "feature": "centroid_hz",
+          "observed": 6644.924154,
+          "reference": 208.119606,
+          "robust_deviation": 32.184023,
+          "unit": "Hz"
+        },
+        {
+          "feature": "spectral_tilt_db_oct",
+          "observed": -3.283744,
+          "reference": -16.573707,
+          "robust_deviation": 6.644981,
+          "unit": "dB/octava"
+        },
+        {
+          "feature": "low_high_db",
+          "observed": -4.201917,
+          "reference": 84.03502,
+          "robust_deviation": -29.412312,
+          "unit": "dB"
+        },
+        {
+          "feature": "f0_range_st",
+          "observed": 10.610024,
+          "reference": 1.3e-05,
+          "robust_deviation": 10.610011,
+          "unit": "semitonos"
+        }
+      ],
+      "window_ids": [
+        "W000009",
+        "W000010",
+        "W000011",
+        "W000012",
+        "W000014",
+        "W000015",
+        "W000016",
+        "W000017",
+        "W000018",
+        "W000019",
+        "W000020"
+      ],
+      "review": {
+        "status": "pending",
+        "author": "",
+        "comment": "",
+        "updated_at": null
+      }
+    }
+  ],
+  "affective_model": {
+    "status": "not_loaded",
+    "predictions": [],
+    "reason": "No se incluyen pesos entrenados ni validación de emociones."
+  },
+  "review_log": [],
+  "limitations": [
+    "Prueba de concepto de seminario. No hay validación afectiva en entrevistas reales.",
+    "Activación e inestabilidad descriptivas son índices heurísticos sin calibración psicológica.",
+    "Amarillo: candidato; naranja: segmento marcado por revisor; rojo: PIN aceptado por revisor.",
+    "Prioridad 1–3 es heurística y no expresa severidad clínica ni certeza.",
+    "Periodicidad y baja energía no son detección fiable de habla, emoción o engaño.",
+    "Jitter/shimmer en habla conectada y espectro dependen de vocal, canal y ruido.",
+    "Sólo se comparan ventanas atribuidas al hablante objetivo; no hay diarización automática.",
+    "Resolución de exportación 1 ms; resolución analítica y exactitud son diferentes."
+  ]
+}

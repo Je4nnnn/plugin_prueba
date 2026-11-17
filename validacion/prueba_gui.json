@@ -1,0 +1,9 @@
+{
+  "gui": "PASS",
+  "source_verified": true,
+  "review_roundtrip": "PASS",
+  "export_accepted_pin": "PASS",
+  "synthetic_only": true,
+  "windows": 48,
+  "candidates": 17
+}

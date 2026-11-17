@@ -1,0 +1,10 @@
+nov 17, 2026 5:59:46 A. M. com.sun.javafx.application.PlatformImpl startup
+ADVERTENCIA: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @57fa26b7'
+nov 17, 2026 5:59:47 A. M. javafx.fxml.FXMLLoader$ValueElement processValue
+ADVERTENCIA: Loading FXML document with JavaFX API of version 19 by JavaFX runtime of version 17.0.2-ea
+nov 17, 2026 5:59:47 A. M. javafx.fxml.FXMLLoader$ValueElement processValue
+ADVERTENCIA: Loading FXML document with JavaFX API of version 19 by JavaFX runtime of version 17.0.2-ea
+nov 17, 2026 5:59:47 A. M. javafx.fxml.FXMLLoader$ValueElement processValue
+ADVERTENCIA: Loading FXML document with JavaFX API of version 19 by JavaFX runtime of version 17.0.2-ea
+nov 17, 2026 5:59:47 A. M. javafx.fxml.FXMLLoader$ValueElement processValue
+ADVERTENCIA: Loading FXML document with JavaFX API of version 18 by JavaFX runtime of version 17.0.2-ea
